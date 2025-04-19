@@ -1,0 +1,91 @@
+% ******************************************************************************
+% ******************************* BEGIN DOCUMENT *******************************
+% ******************************************************************************
+%\documentclass[a4paper,12pt,twoside,online,customfont,custombib,PageStyleI,draftclassic]{Settings/PhDThesisPSnPDF}
+\documentclass[a4paper,12pt,oneside,customfont,custombib,PageStyleI]{Settings/PhDThesisPSnPDF}
+
+% ********************************** Preamble **********************************
+% Preamble: Contains packages and user-defined commands and settings
+\input{Settings/preamble}
+\input{Settings/myPreamble}
+\input{Settings/mySettings}
+\graphicspath{ {./Graphics} }
+
+\usepackage{subcaption}
+% ******************************** Front Matter ********************************
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+            
+        \Huge
+        \textbf{Title}
+            
+        \vspace{0.5cm}
+        \large
+        \textbf{Subtitle}
+            
+        \vspace{1.5cm}
+        \Large    
+        \textbf{Lorenzo Fabbri}
+            
+        \vfill
+        \large   
+        This essay is submitted for the exam of\\
+        \textit{Quantum Cosmology}
+            
+        \vspace{0.8cm}
+            
+        \includegraphics[width=0.4\textwidth]{Graphics/UniversityCrest.png}
+            
+        \large
+        Department of Physics\\
+        Theoretical Physics Curriculum\\
+        University of Bologna\\
+        00/05/2025
+            
+    \end{center}
+\end{titlepage}
+
+\frontmatter
+\input{Sections/Abstract.tex}
+
+% *********************** Adding TOC and List of Figures ***********************
+\begin{spacing}{1.3}
+    \tableofcontents
+\end{spacing}
+
+% ******************************** Main Matter *********************************
+\mainmatter
+\chapter{Overview of the Project}\label{chap:chapter1}
+%\input{Sections/Chapter1/Overview.tex}
+
+\chapter{Differential Geometry and Ricci Flow}\label{chap:chapter2}
+%\input{Sections/Chapter2/IntroRicci.tex}
+
+
+% ********************************** Appendices ********************************
+%\begin{appendices} % Using appendices environment for more functunality
+%\chapter{Metric of a 2-sphere}
+%\input{Sections/appendix.tex}
+%\end{appendices}
+
+% ********************************** Back Matter *******************************
+% Backmatter should be commented out, if you are using appendices after References
+\backmatter
+
+% ********************************** Bibliography ******************************
+\begin{spacing}{0.9}
+
+\cleardoublepage
+\nocite{*}
+\printbibliography[heading=bibintoc, title={References}]
+
+\end{spacing}
+
+% ******************************************************************************
+% ******************************** END DOCUMENT ********************************
+% ******************************************************************************
+
+\end{document}

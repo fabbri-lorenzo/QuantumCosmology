@@ -1,0 +1,114 @@
+\subsection{Fine Tuning Problems in HBB}
+
+From FLRW metric one obtains Friedmann equations by direct variation in the action.
+\begin{equation}
+ds^2_{\text{FLRW}} =  dt^2 - a^2(t) \left[ \frac{dr^2}{1 - k r^2} + d\Omega^2 \right]
+\end{equation}
+\begin{align}
+    G^0_0 &= 8 \pi G T^0_0 \quad \Rightarrow \quad \textcolor{purple!50!blue}{H^2 = \frac{8 \pi G}{3} \rho - \frac{k}{a^2} \label{00}}
+    \\G^i_i &= 8 \pi G T^i_i \quad \Rightarrow \quad \textcolor{purple!50!blue}{3 H^2 + 2 \dot{H} = -8 \pi G p - \frac{k}{a^2} \label{11}}
+\end{align}
+Combining~\eqref{00} and~\eqref{11}, or just by imposing covariant conservation of $T^\mu_\nu$, continuity equation follows:
+\begin{eqopt}
+    \dot{\rho} + 3 H (\rho+P) = 0 \label{continuity}
+\end{eqopt}
+Then one defines
+\begin{eqopt}[darkgreen]
+    H \equiv \frac{\dot{a}}{a} \quad, \quad \omega \equiv \frac{P}{\rho} , \quad M_P^2 \equiv (8\pi G)^{-1}, \quad \tau \equiv \frac{t}{a}, \quad \Omega_{i}\equiv \frac{8\pi G \rho_i}{3H^2} , \quad \Omega_{k}\equiv \frac{-k}{(aH)^2}
+\end{eqopt}
+Dust has $P=0$. For radiation one inspects the pressure components $T^{ii}=\rho/3$. Analogue for the 
+cosmological constant\footnote{For God's sake recall $\Lambda$ has been reinterpreted to be part of $T^{\mu\nu}_{tot}$. Otherwise the above makes no sense!}: $\rho=T^{00}=\Lambda/8\pi G=-T^{ii}=-P$. Hence
+\begin{eqopt}[darkred]
+    \omega_m = 0, \quad  \omega_{\gamma}=\frac{1}{3}, \quad \omega_{\Lambda}=-1
+\end{eqopt}
+\begin{center}
+\begin{tikzpicture}[
+    >=stealth,
+    thick,
+    font=\small,
+    every node/.style={font=\small}
+]
+
+  % --- axes ------------------------------------
+  \draw[->] (0,0) -- (11,0) node[below right] {$a$};
+  \draw[->] (0,0) -- (0,6)  node[left] {$\rho$};
+
+  % --- equality coordinates --------------------
+  \coordinate (aeq)  at (3,2);   % matter–rad equality
+  \coordinate (alam) at (7,1);   % matter–Λ equality
+
+  % --- density curves --------------------------
+  % radiation  ρ_r  (passes through (0,5) and (3,2))
+  \draw[red!80!black, very thick] (0,5) -- (5,0)
+      node[pos=.25,above right] {$\rho_r$};
+
+  % matter      ρ_m  (line through (0,2.75) –> (7,1))
+  \draw[blue!70!black,very thick] (0,2.75) -- (10,0.25)
+  node[pos=.165,above] {$\rho_m$};
+
+  % cosmological constant ρ_Λ
+  \draw[green!60!black, very thick] (0,1) -- (10,1)
+        node[pos=0.16,above] {$\rho_\Lambda$};
+
+  % --- equality points & guides ----------------
+  \fill (aeq)  circle (2pt);
+  \fill (alam) circle (2pt);
+
+  \draw[dashed] (aeq)  -- ++(0,-2);
+  \draw[dashed] (alam) -- ++(0,-1);
+
+  \draw (aeq) node[above right] {recombination};
+
+  % --- “today” marker --------------------------
+  \draw[dashed] (8,0)  -- (8,2) node[above=-2.4pt] {today};
+  \fill[orange] (8,0)  circle (2pt);
+
+  % --- phase braces ----------------------------
+  \draw[decorate,decoration={brace,mirror,amplitude=5pt}]
+        (0,-0.4) -- (3,-0.4) node[midway,below=6pt] {Radiation phase};
+
+  \draw[decorate,decoration={brace,mirror,amplitude=5pt}]
+        (3,-0.4) -- (7,-0.4) node[midway,below=6pt] {Matter phase};
+
+  \draw[decorate,decoration={brace,mirror,amplitude=5pt}]
+        (7,-0.4) -- (10,-0.4) node[midway,below=6pt] {$\Lambda$ phase};
+
+\end{tikzpicture}
+\end{center}
+
+%Horizon Problem
+\begin{mycolorbox}
+\textbf{Horizion problem:}
+
+Observations tell us that the Universe is highly homogeneous and isotropic.
+\begin{eqopt}[blue]
+    \frac{\delta T}{T_{now}} \sim 10^{-4} - 10^{-5} , \quad T_{now} \approx 2.73 K
+\end{eqopt} 
+For simplicity \underline{assume $k=0$} in the metric. Rewrite~\eqref{00}~\eqref{11}. Consider a radial photon. 
+Assume an initial singularity: $t_i = 0$, $a(t_i)=0$. Find \textit{comoving particle horizon}
+\begin{equation}
+    \Delta r = \int_0^t \frac{t^\prime}{a(t^\prime)} = \tau(t)-\tau(0)
+\end{equation}
+Use~\eqref{00}~\eqref{continuity} to relate proportionally $a$ and $t$. See that for $\omega>-1/3$ (SEC) $\Delta r$ is finite
+$\Rightarrow$ \emph{there were regions not in causal contact in the past!}
+Then compute the angle corresponding to the comoving horizon at recombination\footnote{Because CMB is emitted at that time! That's when the universe became transparent and photons were able to travel freely.} 
+$\theta=(\tau_{rec}-\tau_{i})/(\tau_{now}-\tau_{rec})$.
+Rewrite a general $\tau$ difference integrating and change variables to make $H$ appear so you can substitute with~\eqref{00}. \textcolor{blue}{$\theta \approx 1.15^\circ$}.
+\end{mycolorbox}    
+
+%Flatness Problem
+\begin{mycolorbox}[red]
+    \textbf{Flatness problem:}
+
+    From current observations \textcolor{blue}{$\Omega_k <0.02$} $\Rightarrow$ one expects $\sum_i\Omega_i -1 \equiv \Omega_{tot}-1 \lesssim 10^{-2}$
+    
+    Compare present day to Plank epoch: 
+    \begin{equation}
+        \frac{\Omega_{tot}(t_{now})-1}{\Omega_{tot}(t_{P})-1} = \frac{(aH)^2|_{t_P}}{(aH)^2|_{t_{now}}}
+    \end{equation}
+    employ
+    \begin{eqopt}[blue]
+        a \propto T^{-1}, \quad H(t_P) \sim M_P , \quad t_P \sim M_P , \quad H_{now}\sim 10^{-60}M_P 
+    \end{eqopt}
+    \emph{This means $\Omega_{tot}(t_P)-1 \lesssim 10^{-60}$ which is weird}.
+\end{mycolorbox}

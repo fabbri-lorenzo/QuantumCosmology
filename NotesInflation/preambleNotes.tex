@@ -1,0 +1,201 @@
+% ******************************************************************************
+% *********************** Language Font and Colors *****************************
+\usepackage[english]{babel}
+
+\usepackage[T1]{fontenc} % codifica dei font
+\usepackage[utf8]{inputenc} % lettere accentate da tastiera
+
+\usepackage{microtype} % migliora riempimento righe - carica sempre
+
+%\usepackage[dvipsnames]{xcolor}
+
+% ******************************************************************************
+% ******************************* Utilities ************************************
+\usepackage{lipsum}
+\usepackage{comment}
+\usepackage{quoting} % per le citazioni in display
+\quotingsetup{font=small} % serve per mantenere lo stesso stile in tutte le citazioni
+\usepackage{enumitem}
+\usepackage[margin=1in]{geometry}        % Page margins
+\usepackage{parskip} % removes indentation
+\usepackage[hang,flushmargin]{footmisc}
+
+% ******************************************************************************
+% *************************** Math and Physics *********************************
+\usepackage{amsmath} % per la matematica
+\usepackage{amssymb} % per la matematica
+\usepackage{cancel}  % per cancellare termini in eq
+\usepackage{mathtools} % per valore assoluto e norma
+\usepackage{braket} % per i comandi \Set e \Bra e simili
+\usepackage{amsthm} % per teoremi e dimostrazioni
+\usepackage{tensor} % per tensori e indici alto/basso
+\usepackage{physics}
+\usepackage{bm}
+\newcommand{\openleftinterval}[2]{\left[ #1, #2 \right[}
+
+% ******************************************************************************
+% ************************* Tables and Figures *********************************
+\usepackage{caption} % per tabelle
+\usepackage{graphicx} % per figure
+\usepackage{booktabs} % For professional-looking tables
+\usepackage{multirow} % For merging rows
+\captionsetup[table]{belowskip=10pt, labelformat=simple, labelsep=colon}
+
+
+% ******************************************************************************
+% ************************* TIKZ AND SETTINGS **********************************
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{calc,graphs,intersections,plotmarks,shapes,hobby}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.pathreplacing,calc}
+\usetikzlibrary{calc,patterns,decorations.markings}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta, patterns.meta}
+%\usepackage{pgfplots} 
+%\pgfplotsset{compat=newest}
+
+
+% ******************************************************************************
+% ******************************* OTHERS ***************************************
+\usepackage[autostyle,italian=guillemets]{csquotes}
+\usepackage{hyperref}
+\usepackage{subfiles}
+\usepackage{setspace}
+\usepackage{titlesec} % TO CHANGE SIZE OF SECTIONS, SUBSECTIONS ECC
+\usepackage{fancyhdr}                    % Custom header/footer
+
+% ******************************************************************************
+% ********************* Table of Contents *****************************
+\setcounter{secnumdepth}{3} % numbering up to subsection
+\setcounter{tocdepth}{1} % in TOC up to section
+
+% *****************************************************************************
+% *************************** Bibliography  and References ********************
+
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex}
+\addbibresource{bibliography.bib}
+
+
+% *****************************************************************************
+% *****************************************************************************
+% *****************************************************************************
+% *****************************************************************************
+% *****************************************************************************
+
+% Ragged bottom avoids extra whitespaces between paragraphs
+\raggedbottom
+% To remove the excess top spacing for enumeration, list and description
+%\usepackage{enumitem}
+%\setlist[enumerate,itemize,description]{topsep=0em}
+
+% ********************Captions and Hyperreferencing / URL **********************
+
+% Captions: This makes captions of figures use a boldfaced small font.
+%\RequirePackage[small,bf]{caption}
+
+\RequirePackage[labelsep=space,tableposition=top]{caption}
+\renewcommand{\figurename}{Fig.} %to support older versions of captions.sty
+
+\definecolor{BrightLightBlue}{RGB}{51, 153, 255} %bright light blue
+%\definecolor{darkblue}{HTML}{1F4E79}  % Professional dark blue
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    filecolor=blue!70!black,      
+    urlcolor=blue!70!black, 
+    citecolor=BrightLightBlue,
+    pdfpagemode=FullScreen}
+    
+% ********************** TOC depth and numbering depth *************************
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+
+% ******************************* Nomenclature *********************************
+
+% To change the name of the Nomenclature section, uncomment the following line
+
+%\renewcommand{\nomname}{Symbols}
+
+
+% ********************************* Appendix ***********************************
+
+% The default value of both \appendixtocname and \appendixpagename is `Appendices'. These names can all be changed via:
+
+%\renewcommand{\appendixtocname}{List of appendices}
+%\renewcommand{\appendixname}{Appndx}
+
+% *********************** Configure Draft Mode **********************************
+
+% Uncomment to disable figures in `draftmode'
+%\setkeys{Gin}{draft=true}  % set draft to false to enable figures in `draft'
+
+% These options are active only during the draft mode
+% Default text is "Draft"
+%\SetDraftText{Draft}
+
+% Default Watermark location is top. Location (top/bottom)
+%\SetDraftWMPosition{bottom}
+
+% Draft Version - default is v1.0
+%\SetDraftVersion{v1.1}
+
+% Draft Text grayscale value (should be between 0-black and 1-white)
+% Default value is 0.75
+%\SetDraftGrayScale{0.3}
+
+% Example todo: \mynote{Hey! I have a note}
+
+
+%%%%%%% FOR SITUNIX ERROR
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+
+%------------------------------------------------
+% Section Title Formatting
+%------------------------------------------------
+% Redefine \section so that it has no label/number
+\titleformat{\section}
+  [block]                   % The "shape" for the title
+  {\Large\bfseries}         % <format> code: applies to label + title
+  {}                        % <label> is empty ⇒ no numbering
+  {0em}                     % <labelsep> (space between label and text); unused here
+  {} 
+
+% Subsection formatting
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titlespacing{\subsection}{0pt}{1.0em}{0.5em}
+
+%------------------------------------------------ 
+% Fancy Header & Footer
+%------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{\footnotesize \today \qquad Lorenzo Fabbri}
+\rfoot{\footnotesize \thepage}
+\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
+
+
+% ------------------------------------------------ 
+% NEW ENVIORMENTS
+% ------------------------------------------------ 
+\newenvironment{eqopt}[1][purple!50!blue] 
+{\color{#1}\begin{equation}}
+{\end{equation}\ignorespacesafterend}
+
+\usepackage[most]{tcolorbox}   % “most” loads common skins & libraries
+\newtcolorbox{mycolorbox}[1][blue]
+{
+  colback   = #1!8!white,   % light‑blue fill  (8 % blue, 92 % white)
+  colframe  = #1!50!black,  % optional darker border
+  boxrule   = 0.4pt,          % border thickness (0 pt → frameless)
+  arc       = 2mm,            % corner roundness  (0 mm → sharp)
+  left      = 1em,            % inner padding
+  right     = 1em,
+  top       = 0.6em,
+  bottom    = 0.6em,
+  enlarge left by = 0mm,      % keeps alignment inside lists
+  breakable               % allow page breaks inside
+}

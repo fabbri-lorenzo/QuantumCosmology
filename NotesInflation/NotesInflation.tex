@@ -1,0 +1,42 @@
+\documentclass[12pt,a4paper]{article}
+% ********************************** Preamble **********************************
+\input{preambleNotes.tex}
+
+\definecolor{darkgreen}{rgb}{0.0,0.39,0.0}
+\definecolor{darkred}{rgb}{0.80,0.00,0.00}
+\definecolor{mypurple}{rgb}{0.5, 0, 0.5}
+
+% ******************************** Front Matter ********************************
+\begin{document}
+
+\begin{center}
+    \Huge\textbf{Inflationary Cosmology}
+\end{center}
+
+% Table of Contents with no title and no numbers in front of sections
+\renewcommand{\contentsname}{}
+\renewcommand{\numberline}[1]{}
+\tableofcontents
+\vspace{1cm}
+
+\section{Problems of the HBB Model}\label{sec:section1}
+\input{Sections/Section1/FTProblems.tex}
+\input{Sections/Section1/InflSolution.tex}
+
+\section{Basics of Inflation}\label{sec:section2}
+\input{Sections/Section2/SlowRoll.tex}
+\input{Sections/Section2/Examples.tex}
+
+\section{Quantum Inflation}\label{sec:section3}
+\input{Sections/Section3/CurvedST.tex}
+\input{Sections/Section3/PerturbTheory.tex}
+
+%\section{BOH}\label{sec:section4}
+%\input{Sections/Section}
+%\input{Sections/Section}
+%
+%\section{BOH}\label{sec:section5}
+%\input{Sections/Section}
+%\input{Sections/Section}
+
+\end{document}
