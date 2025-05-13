@@ -1,0 +1,58 @@
+\subsection{Tensor Perturbations}\label{sec:TensorPT}
+They are gauge invariant as you can prove that $\tilde{h}_{ij}= h_{ij}$ (see Section~\ref{sec:cosmological_perturbation_theory}), 
+\begin{equation}
+    ds^2= a^2(\tau)\left[ d\tau^2  - \left(\delta_{ij} -  h_{ij}\right)  dx^i dx^j \right] = a^2(\tau)\left(\eta_{\mu\nu} + h_{\mu\nu}\right) \quad \text{with} \quad h_{\mu 0} = 0
+\end{equation}
+\begin{eqopt}[darkred]
+    \delta G^0_0 = 0 = \delta G^0_i \qquad \delta G^i_j = \frac{1}{2a^2} \left(h^i_j{\,}'' + 2\frac{a'}{a} h^i_j{\,}' - \Delta h^i_j\right)
+\end{eqopt}
+In Section~\ref{sec:cosmological_perturbation_theory} we evaluated $\delta T^i_j$ of a perfect fluid/scalar field and found it was $\propto \delta^i_j$; you can check that adding $h_{ij}$ in the perturbed metric does not change this result. 
+This implies $\delta G^1_1 = \delta G^2_2 = \delta G^3_3 \equiv A$, but due to the fact that $h$ is traceless (and also transverse), we have $3A = 0 \,\Rightarrow$\footnote{One can reach~\eqref{eq:EOMTP} also by expanding $S_{EH}$ action at second order in $h_{ij}$: $\frac{M_{p}^{2}}{8}\int d^{4}x\,a^{2}
+\bigl[{h'_{ij}}^{2} - (\partial_{k}{h_{ij}})^{2}\bigr]$}
+
+\begin{equation}\label{eq:EOMTP}
+    h_{ij}{\,}'' + 2\frac{a'}{a} h_{ij}{\,}' - \Delta h_{ij} =0
+\end{equation}
+\emph{A perfect fluid does not source gravitational waves.}
+
+$h_{ij}$ has $3(3+1)/2 -1-3 = 2$ independent components $\,\Rightarrow\, 2$ polarizations of the graviton. For propagation along $x^3$ ($h_{ij} = \epsilon_{ij}e^{ikz-i \omega\tau}$) we have
+\begin{equation}
+    h_{ij}= \begin{pmatrix}
+        h_+ & h_x & 0\\
+        h_x & -h_+ & 0 \\
+        0 & 0 & 0 
+        \end{pmatrix}
+\end{equation}
+Each polarization $h_+$, $h_x$ follows~\eqref{eq:EOMTP} and propagates at the speed of light, as there is just $c=1$ in front of $\Delta h_{ij}$.
+Therefore, the action for gravitational waves can be written as:
+\begin{eqopt}[darkred]
+    S_{TT} = \sum_{A}\,\frac{M_{p}^{2}}{8}\int d^{4}x\,a^{2}
+\bigl[(h^{(A)})'^{2} - (\partial_{k}h^{(A)})^{2}\bigr]
+\end{eqopt}
+Now, if we define the canonical variable
+\begin{eqopt}[darkgreen]
+v^{(A)} \equiv a\,h^{(A)}\frac{M_P}{2}
+\end{eqopt}
+we can rewrite the action as
+\begin{equation}
+    S_{TT} = \sum_{A}\,\frac{1}{2}\int d\tau\,d^{3}x
+\bigl[(\partial_{\tau}v^{(A)})^{2}
+     + \tfrac{a''}{a}\,(v^{(A)})^{2}
+     - (\partial_{k}v^{(A)})^{2}\bigr]
+\end{equation}
+Compare it with~\eqref{eq:ScalarPTAction}, this is MS equation for tensor perturbations. The "mass" term here is $a''/a$, which is $2/\tau^2$ in dS background and $(2+3\epsilon)/\tau^2$ in slow roll background.
+
+As in scalar case, $\int \frac{d^3k}{(2\pi)^{3/2}} v^{(A)}_{\vec{k}}(\tau) e^{i\vec{k}\cdot\vec{x}}$ and then solving MS equation in Fourier space leads to $v^{(A)}(\vec{x}, \tau) = \frac{1}{\sqrt{2}} \int \frac{d^3 k}{(2\pi)^{3/2}} \left[ a^-_k v_k^{(A)\,*}(\tau) e^{i \vec{k} \cdot \vec{x}} + a_k^+ v^{(A)}_k(\tau) e^{-i \vec{k} \cdot \vec{x}} \right]$,
+we find a solution in the form of Hankel functions but with an index \textcolor{darkred}{$\nu_T = 3/2 - \epsilon$}. Imposing BD vacuum fixes constants ($C_1 = 0$, $C_2=\sqrt{\pi}/2$) and then as before we define
+\begin{eqopt}[darkgreen]
+\Delta_T \equiv \frac{k^3}{2\pi^2}\sum_A |h^{(A)}_k|^2 \qquad \mathcal{A}_{T} \equiv \frac{2 H^2}{\pi^2 M^2_p}\Bigg|_{k=aH}  \qquad n_T = 3-2\nu_T \textcolor{black}{\,= -2\epsilon}
+\end{eqopt}
+as, for slow roll ($\nu \approx 3/2$),
+\begin{equation}
+    \Delta_T = \frac{k^3}{2\pi^2} 2 \left(\frac{2}{a M_P}\right)^2 |v_k|^2 \approx 2 \frac{H^2}{\pi^2}\left(\frac{k}{aH}\right)^{3-2\nu}
+\end{equation}
+One can then define the \textit{tensor to scalar ratio} (in~\ref{sec:ScalarPT} I had $M_P = 1$)
+\begin{eqopt}[darkgreen]
+    r \equiv \frac{\mathcal{A}_T}{\mathcal{A}_S} \textcolor{black}{\; = 16\epsilon = -2\eta_T}
+\end{eqopt}
+The latter is true for all single field models and it is called \textit{consistency relation}. If observations say $r \neq -2\eta_T$ then inflation was not single field.

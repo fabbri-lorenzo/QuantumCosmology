@@ -1,0 +1,85 @@
+\section{Brans-Dicke Dynamics}
+By varying $S_{BD}$ with respect to the metric we obtain the Einstein-Brans-Dicke equation of motion:
+\begin{equation}\label{eq:EBD}
+    \begin{aligned}
+        G_{\mu\nu} = \frac{1}{\phi} \left[ T_{\mu\nu}^{(\phi)}+ T_{\mu\nu}^{(m)}\right]+ \frac{1}{\phi} \left( \nabla_\mu \nabla_\nu \phi - g_{\mu\nu} \Box  \right) \phi 
+    \end{aligned}
+\end{equation}
+with the energy-momentum tensors (EMT) defined as:
+\begin{align}
+    T^{(\phi)}_{\mu\nu} &\equiv -\frac{2}{\sqrt{-g}} \frac{\delta\!\left( \sqrt{-g}\,\mathcal{L}_{\phi} \right)}{\delta g^{\mu\nu}} = \frac{\omega_{BD}}{\phi} \left[ \nabla_\mu \phi \, \nabla_\nu \phi - \frac{1}{2} g_{\mu\nu} (\nabla \phi)^2 \right] - g_{\mu\nu} V(\phi) \\[6pt]
+T^{(m)}_{\mu\nu} &\equiv -\frac{2}{\sqrt{-g}} \frac{\delta\!\left( \sqrt{-g}\,\mathcal{L}_m \right)}{\delta g^{\mu\nu}}
+\end{align}
+\begin{proof}\label{proof:BD}
+    Let us split the action $S_{BD}$ in two parts: $ S_{BD} = S^{(\text{grav})}+S^{(m)} $, where
+\begin{equation*}
+  S^{(\text{grav})} \equiv \int d^4x \sqrt{-g} \left[  \phi R - \frac{\omega_{BD}}{\phi} \left(\partial \phi \right)^2- 2V(\phi)\right] \quad \text{,} \quad S^{(m)} \equiv 2\int d^4x \sqrt{-g} \mathcal{L}_{m}
+\end{equation*}
+The interesting part of the variation is the first term, which we can write as
+    \begin{equation*}
+   \frac{1}{\sqrt{-g}}\frac{\delta S^{(\text{grav})}}{\delta g^{\mu\nu}}=\phi \left[R_{\mu\nu}  - \frac{1}{2}g_{\mu\nu}R \right] + \frac{\omega_{BD}}{2\phi}g_{\mu\nu}(\nabla \phi)^2  -  \frac{\omega_{BD}}{\phi}\nabla_\mu \phi \nabla_\nu \phi + g_{\mu\nu} V + \frac{1}{\sqrt{-g}}\frac{\delta \bar{S}}{\delta g^{\mu\nu}}
+    \end{equation*}
+    One can easily recognize the Einstein tensor $G_{\mu\nu}$ and the EMT for $\phi$, while the last term is highly non trivial.
+    \begin{equation*}
+        \delta \bar{S} = \int_{\mathcal{M}} d^{4}x \,\sqrt{|g|}\,\phi\, g^{\mu\nu}\,\delta R_{\mu\nu}
+    \end{equation*}
+    To compute this variation we employ the typical requirement that any fields variations, as well as variations of their first derivatives, vanish
+    on the integration boundary $\partial \mathcal{M}$; this, along with some algebra which can be found in Appendix~\ref{appendixA}, leads to
+    \begin{equation*}
+        \frac{\delta \bar{S}}{\delta g^{\mu\nu}} = \left(  g_{\mu\nu} \Box  - \nabla_\mu \nabla_\nu \phi \right) \phi 
+    \end{equation*}
+    and thus completes the proof.
+\end{proof}
+
+Action $S_{BD}$ can be also varied with respect to the scalar field $\phi$ to get the Klein-Gordon equations for Brans-Dicke theory:
+\begin{equation}\label{eq:KGBD}
+    2\,\omega_{\mathrm{BD}}\frac{\Box\phi}{\phi}
+    - \omega_{\mathrm{BD}}
+      \left(\frac{\partial\phi}{\phi}\right)^{\!2}
+    + R = 2\,V_{,\phi}
+\end{equation}
+\begin{proof}
+    It is easy to see that $\delta_\phi S_{BD}$ can be cast as
+\begin{equation*}
+    \delta_\phi S_{\mathrm{BD}}
+      = \int_{\mathcal{M}} d^{4}x\,\sqrt{|g|}
+         \Bigl[ \delta\phi\,R
+            - 2\,\frac{\omega_{\mathrm{BD}}}{\phi}\,
+              \nabla^{\mu}\phi\,\nabla_{\mu}(\delta\phi)
+            + \omega_{\mathrm{BD}}
+              \left(\frac{\partial\phi}{\phi}\right)^{\!2}\,\delta\phi
+            - 2\,V_{,\phi}\,\delta\phi\Bigr]
+\end{equation*}
+Now notice that we can construct a total derivative term
+\begin{equation*}
+        \nabla_\mu\!\Bigl(\tfrac{\nabla^{\mu}\phi}{\phi}\,\delta\phi\Bigr)
+           = \frac{\Box\phi}{\phi}\,\delta\phi
+             - \left(\frac{\partial\phi}{\phi}\right)^{2}\!\delta\phi
+             + \frac{\nabla^{\mu}\phi}{\phi}\,\nabla_{\mu}(\delta\phi)
+\end{equation*}
+which vanishes at the boundary of the integration domain. This allows us to substitute directly inside $\delta_\phi S_{\mathrm{BD}}$ the following expression:
+\begin{equation*}
+    -2 \frac{\omega_{BD}}{\phi}\nabla^{\mu}\phi\,\nabla_{\mu}(\delta\phi) = 2 \omega_{BD} \left[\frac{\Box\phi}{\phi}\,\delta\phi
+    - \left(\frac{\partial\phi}{\phi}\right)^{2}\!\delta\phi\right]
+\end{equation*}
+Doing this gives us 
+\begin{equation*}
+    \delta_\phi S_{BD}
+      = \int_{\mathcal{M}} d^{4}x\,\sqrt{|g|}\,\delta\phi\,
+         \Bigl[
+            R
+            + 2\,\omega_{\mathrm{BD}}\frac{\Box\phi}{\phi}
+            - \omega_{\mathrm{BD}}
+              \left(\frac{\partial\phi}{\phi}\right)^{\!2}
+            - 2\,V_{,\phi}
+         \Bigr]
+\end{equation*}
+From which equation~\eqref{eq:KGBD} follows after imposing $\delta_\phi S_{BD}/\delta \phi = 0\;$.
+\end{proof}
+    
+It can be shown~\cite{Quiros:2019ktw} that combining the equations of motions~\eqref{eq:EBD} and~\eqref{eq:KGBD} gives the covariant conservation
+of the EMT for matter:
+\begin{equation}
+  \nabla^{\nu}T_{\mu\nu}^{(m)}= 0
+\end{equation} 
+meaning that the matter fields follow geodesics of the metric while the scalar field $\phi$ just modulates the strength of the interaction through equation~\eqref{eq:modulationEq}.

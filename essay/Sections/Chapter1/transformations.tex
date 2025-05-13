@@ -1,0 +1,52 @@
+\section{Conformal Transformations}
+The action for Brans–Dicke theory in~\eqref{eq:actionBD} is said to be given in the \textit{Jordan frame}. However, this formulation is not unique as one can always perform a conformal transformation on the metric, moving to a different frame; usually to facilitate calculations or to get more physical insights from a certain theory.
+Hence, it is important to try to clarify the relationships between different frames and discuss the two most common ones.
+
+Invariance of physics under re-definition of units of measurements implies invariance under Weyl transformations of the metric.
+Usually, the frame with the original metric tensor $g_{\mu\nu}$ is the abovementioned \textit{Jordan frame} (JF) while the frame obtained after a conformal transformation is the \textit{Einstein frame} (EF)~\cite{GiontiSJ:2023tgx}.
+
+After a Weyl transformation $\tilde{g}_{\mu\nu} = \Omega^2 g_{\mu\nu}$, in 4 dimensions, we have the following rescalings~\cite{Faraoni:1998qx}:
+\begin{equation}\label{eq:conformaltransformations}
+    \sqrt{-\tilde{g}} = \Omega^{4} \sqrt{-g} \quad \text{,}\quad 
+    \tilde{R} = \Omega^{-2} \left[ R - 6\frac{\Box \Omega}{\Omega} \right]
+\end{equation}
+Considering a conformal transformation in which $\Omega(x)\sim \phi^n(x)$, we would have that a term $\sqrt{-g}\phi R$ becomes
+$\sim \sqrt{-\tilde{g}}\phi^{-4n}\phi \tilde{R} \phi^{2n} + \dots = \sqrt{-\tilde{g}}\phi^{-2n +1} \tilde{R} + \dots$ so we can break the coupling between $R$ and $\phi$ choosing 
+$\Omega^2(x)\sim \phi(x)$.
+
+For instance in Brans–Dicke theory in JF 
+the choice of $\Omega = \sqrt{16 \pi G \phi}$ leads to
+\begin{equation}\label{eq:transformationAction}
+S_{BD}^{(E)} = \int d^4x \sqrt{-\tilde{g}} \left\{\frac{\tilde{R}}{16\pi G} - \frac{1}{2} (\tilde{\partial} \tilde{\phi})^2 
++ \frac{e^{ -8 \sqrt{\frac{\pi G}{2\omega + 3}} \tilde{\phi} }}{(16\pi G)^2} \left(-2 V(\tilde{\phi})+ 2\mathcal{L}_{\text{m}}(\tilde{g})\right) \right\}
+\end{equation}
+Notice that to obtain the correct form of the kinetic term in Einstein frame we have also performed a redefinition of the field:
+\begin{equation}\label{eq:transformationDerv}
+    d\tilde{\phi} = \sqrt{\frac{2\omega + 3}{16\pi G}} \frac{d\phi}{\phi}
+\end{equation}
+\begin{proof}
+  The Ricci tensor in JF can be written using~\eqref{eq:conformaltransformations} as
+  \begin{equation*}
+    R = \Omega^2 \tilde{R}_{\mu\nu} +6 \frac{\Box \Omega}{\Omega} = 16\pi G \phi \tilde{R}_{\mu\nu} + \sqrt{\phi} \frac{16\pi G}{2} \left[\frac{\tilde{\Box} \phi}{\sqrt{\phi}} - \frac{(\tilde{\partial} \phi)^2}{2 \phi^{3/2}}\right]
+  \end{equation*}
+  Using this expression we can rewrite the action in EF as
+  \begin{equation*}
+    S_{BD}^{(E)} = \int d^4x \frac{\sqrt{-\tilde{g}}}{16 \pi G}\left\{ \tilde{R}+ 3\left[\frac{\tilde{\Box} \phi}{\phi} - \frac{(\tilde{\partial} \phi)^2}{2 \phi^2}\right]  - \frac{\omega_{BD}}{\phi^2} (\tilde{\partial} \phi)^2  -  \frac{2V(\phi)}{16 \pi G \phi^2} + \frac{2\mathcal{L}_{\text{m}}}{16 \pi G \phi^2}  \right\}
+  \end{equation*}
+  Then, we transform $\phi$ in order to obtain the correct form of the kinetic term, i.e.\ we ask 
+  \begin{equation*}
+    -\frac{3}{2}\frac{1}{16 \pi G}\frac{(\tilde{\partial} \phi)^2}{\phi^2} - \frac{2 \omega_{BD}}{16 \pi G} \frac{(\tilde{\partial} \phi)^2}{\phi^2} \overset{!}{=} - \frac{1}{2} (\tilde{\partial} \tilde{\phi})^2
+  \end{equation*}
+  This induces the transformation~\eqref{eq:transformationDerv} for the field's derivatives, which can be integrated to obtain the transformation for $\phi$:
+  \begin{equation*}
+    \phi= \exp{\sqrt{\frac{16 \pi G}{2\omega_{BD}+3}}\tilde{\phi}}
+  \end{equation*}
+  Inserting this in the transformed action reproduces~\eqref{eq:transformationAction}.
+
+  The $(\tilde{\Box} \phi)/ \phi$ term is usually omitted because it is compensated by the inclusion of boundary terms in $S^{(E)}_{BD}$~\cite{Quiros:2019ktw}. After this cancellation, the final EF action contains the standard Gibbs-Hawking-York boundary term\footnote{$h$ is the determinant of the induced metric on $\partial \mathcal{M}$, $K$ is the trace of the extrinsic curvature of the boundary. The derivation of the discussed boundary terms is rather technical and goes beyond the scope of this essay but can be found in~\cite{Lidsey_2000}.}: $\,2 \bigintsss_{\partial_\mathcal{M}} d^3x \sqrt{|\tilde{h}|}K$.
+\end{proof}
+
+While both formulations of the BD theory discussed above are in a relationship of mathematical equivalence, their physical equivalence may be, at least, questionable. 
+In fact, while the JF Brans–Dicke theory~\eqref{eq:actionBD} is a STT of gravity in the sense that the gravitational interactions are carried by the metric field of geometric origin, together with the non-geometric BD scalar field, the EFBD theory~\eqref{eq:transformationAction} is a purely geometric theory of gravity indistinguishable from GR except for the presence of an additional non-gravitational universal interaction (fifth-force) between the scalar and the remaining matter fields through the interaction term $\propto e^{-(\dots)\tilde{\phi}}\mathcal{L}_m$ in the action.
+When one compares two different frames, even when these are related by a mathematical relationship of equivalence, as long as the physical laws are not invariant under the equivalence relationship, what one is comparing is two different theories with their own set of measurable quantities. Hence, it is natural to get different predictions for a given quantity when computed in terms of the measurable quantities of one or another frame. 
+In this regard, looking for evidence on the non-equivalence of the different conformal frames reduces to looking for evidence in favor of one or the other framework. A different thing is to search for a physical conformal frame among the conformally related ones. This would be a task inevitably doomed to failure. Actually, if the conformally related frames are physically equivalent, then all (or none) of them are physical~\cite{Quiros:2019ktw}.

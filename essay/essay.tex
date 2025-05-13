@@ -2,7 +2,7 @@
 % ******************************* BEGIN DOCUMENT *******************************
 % ******************************************************************************
 %\documentclass[a4paper,12pt,twoside,online,customfont,custombib,PageStyleI,draftclassic]{Settings/PhDThesisPSnPDF}
-\documentclass[a4paper,12pt,oneside,customfont,custombib,PageStyleI]{Settings/PhDThesisPSnPDF}
+\documentclass[a4paper,12pt,oneside,customfont,custombib,PageStyleII]{Settings/PhDThesisPSnPDF}
 
 % ********************************** Preamble **********************************
 % Preamble: Contains packages and user-defined commands and settings
@@ -20,13 +20,9 @@
         \vspace*{1cm}
             
         \Huge
-        \textbf{Title}
+        \textbf{Scalar Tensor Theories of Gravity and Their Relevance in Cosmology}
             
-        \vspace{0.5cm}
-        \large
-        \textbf{Subtitle}
-            
-        \vspace{1.5cm}
+        \vspace{4cm}
         \Large    
         \textbf{Lorenzo Fabbri}
             
@@ -43,13 +39,10 @@
         Department of Physics\\
         Theoretical Physics Curriculum\\
         University of Bologna\\
-        00/05/2025
+        \today
             
     \end{center}
 \end{titlepage}
-
-\frontmatter
-\input{Sections/Abstract.tex}
 
 % *********************** Adding TOC and List of Figures ***********************
 \begin{spacing}{1.3}
@@ -58,18 +51,31 @@
 
 % ******************************** Main Matter *********************************
 \mainmatter
-\chapter{Overview of the Project}\label{chap:chapter1}
-%\input{Sections/Chapter1/Overview.tex}
 
-\chapter{Differential Geometry and Ricci Flow}\label{chap:chapter2}
-%\input{Sections/Chapter2/IntroRicci.tex}
+\chapter*{Introduction}\label{chap:Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+\input{Sections/Introduction.tex}
+
+\chapter{Brans–Dicke Theory}\label{chap:chapter1}
+\input{Sections/Chapter1/introBD.tex}
+\input{Sections/Chapter1/EOMBD.tex}
+\input{Sections/Chapter1/transformations.tex}
+
+\chapter{\texorpdfstring{$f(R)$}{f(R)} Theories}\label{chap:chapter2}
+\input{Sections/Chapter2/introfR.tex}
+\input{Sections/Chapter2/expansion.tex}
+
+
+\chapter*{Conclusions}\label{chap:Conclusions}
+\addcontentsline{toc}{chapter}{Conclusions}
+\input{Sections/Conclusions.tex}
 
 
 % ********************************** Appendices ********************************
-%\begin{appendices} % Using appendices environment for more functunality
-%\chapter{Metric of a 2-sphere}
-%\input{Sections/appendix.tex}
-%\end{appendices}
+\begin{appendices} % Using appendices environment for more functionality
+\chapter{}\label{appendixA}
+\input{Sections/appendix.tex}
+\end{appendices}
 
 % ********************************** Back Matter *******************************
 % Backmatter should be commented out, if you are using appendices after References
@@ -81,7 +87,7 @@
 \cleardoublepage
 \nocite{*}
 \printbibliography[heading=bibintoc, title={References}]
-
+\thispagestyle{empty}
 \end{spacing}
 
 % ******************************************************************************

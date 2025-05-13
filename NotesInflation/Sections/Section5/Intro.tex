@@ -1,0 +1,29 @@
+\emph{When inflation ends the inflaton dumps its energy into standard model particles:} this is the process called \textit{reheating}. 
+After reheating the Universe is still radiation dominated until recombination at $t_{eq}$. The latter time can be estimated, in terms of redshift $z_{eq}$, by $\rho_m^{eq} = \rho_\gamma^{eq}$ and then employing $\Omega_{\rho_i}^{\text{now}}$.
+
+After radiation-matter equivalence the Universe remains a coupled baryon-photon plasma until recombination, when the already existing free photons can propagate freely; resulting in Plankian spectrum we observe: the CMB.
+
+To estimate $z_{rec}$ start from the number density of a certain species
+\begin{eqopt}[darkred] \label{eq:NumberDensityExact}
+    n=\frac{g}{(2\pi)^3}\int f(\vec{p}) d^3p \; \textcolor{black}{=\, \frac{g}{2\pi^2}\int_m^\infty f(\vec{E}) E \sqrt{E^2-m^2} dE} \qquad f(\vec{p})= \frac{1}{e^{\frac{E-\mu}{T}}\pm 1}
+\end{eqopt}
+Approx $e^{\frac{E-\mu}{T}}\pm 1 \approx e^{\frac{E-\mu}{T}}$ and consider non-relativistic particles, for which $T\ll m$:
+\begin{eqopt}[darkred]\label{eq:NumberDensityApprox}
+    n=g\left(\frac{mT}{2\pi}\right)^{3/2}\,e^{\frac{\mu - m}{T}}
+\end{eqopt}
+$g = 2 S +1$-factors are the usual internal degeneracy (spin, etc.) of each species.
+The \textit{proton-electron capture} to form neutral hydrogen is the process happening at recombination. In the early Universe before recombination we have equilibrium: $p + e \leftrightarrow  H + \gamma$.
+\underline{Assume $n_B = n_p + n_H$}, i.e.\ all baryons are in the form of protons and hydrogen atoms. \underline{Assume thermal and chemical ($\mu_H = \mu_p + \mu_e$) equilibrium}. Furthermore, $n_p = n_e$ due to charge neutrality.
+We are interested in the ratio $n_H / (n_p n_e) $ as it tells us how neutral (and thus transparent for photons) is the Universe at temperature $T$. Define \textit{hydrogen biding energy} \textcolor{darkgreen}{$B\equiv m_p+m_e -m_H$}. Employing~\eqref{eq:NumberDensityApprox}
+\begin{equation}\label{eq:SahaInitial}
+    \frac{n_H}{n_pn_e}\, \overset{m_H \simeq m_p}{\approx}\, \underbrace{\frac{g_H}{g_p g_e}}_{=1} \left(\frac{2\pi}{m_e T}\right)^{3/2} e^{B/T} \overset{!}{=} \frac{n_p /n_B^2}{n_e^2/n_B^2} = \frac{1}{n_B} \frac{1-n_e/n_B}{n_e^2/n_B^2}
+\end{equation}
+Define the \textit{fractional ionization} \textcolor{darkgreen}{$ \chi_e \equiv n_e / n_B$} and the \textit{baryon to photon ratio} \textcolor{darkgreen}{$ \eta \equiv n_B / n_\gamma$}\textcolor{blue}{$\,\simeq 6\cdot 10^{-10}$}. Where \textcolor{darkred}{$n_\gamma = \frac{2}{\pi^2} \zeta(3)T^3$} comes from direct integration of~\eqref{eq:NumberDensityExact}.
+We can now rewrite~\eqref{eq:SahaInitial} in the form called \textit{Saha equation}
+\begin{eqopt}\label{eq:Saha}
+    \frac{1-\chi_e}{\chi_e^2}\Bigg|_{eq} = \frac{4\sqrt{2}}{\sqrt{\pi}}\zeta(3) \eta \left(\frac{T}{m_e}\right)^{3/2} e^{B/T}
+\end{eqopt}
+Universe becomes transparent for $\chi_e \rightarrow 0$, as free protons and electrons diminish and the former start having a  high mean free path.
+\textcolor{darkred}{For $\chi_e = 0.01$ we have from~\eqref{eq:Saha} $T \approx 3500K$} $\; \Rightarrow z_{rec}=\frac{T_{rec}}{T_{now}}-1 \simeq 1200$.
+
+Thermal equilibrium is no longer a good approximation during inflation, indeed a more accurate result can be found using kinteic theory: \textcolor{darkred}{$z_{rec}\simeq1100$}.

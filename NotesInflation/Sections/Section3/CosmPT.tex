@@ -1,0 +1,65 @@
+\subsection{Cosmological Perturbation Theory}
+\label{sec:cosmological_perturbation_theory}
+The zeroth-order scheme outlined
+in Section~\ref{sec:slowRollInfl} ensures that the universe will be close to uniform on all scales of
+interest today. There are perturbations about this zeroth-order scheme, though, and these
+perturbations—produced early on when the scales are causally connected—persist long
+after inflation has terminated.
+
+In cosmology, we always work in terms of statistics, such as the correlation function
+and power spectrum, because no known theory predicts the overdensity in a given spot
+on the sky. In the inflationary scenario, this uncertainty is fundamental: inflation erases all
+traces of what came before it, and replaces those with quantum-mechanical vacuum fluctuations, 
+which cannot be predicted in principle. What inflation predicts then is precisely
+the statistical distributions from which the perturbations are drawn.
+
+We are most interested in scalar perturbations to the metric since these couple to the
+density of matter and radiation and ultimately are responsible for the structure we observe
+in the universe. Inflation also generates tensor fluctuations in the metric, that is, gravitational
+waves. These are not coupled to the density and so are not responsible for the large-scale structure 
+of the universe, but they do induce anisotropies in the
+CMB~\cite{ModernCosm}.
+
+\begin{eqopt}\label{perturbation}
+    g_{\mu\nu} = \bar{g}_{\mu\nu} + \delta g_{\mu\nu} \qquad T_{\mu\nu} = \bar{T}_{\mu\nu} + \delta T_{\mu\nu}
+\end{eqopt}
+Expanding the Einstein equations to first order in perturbations, we have:
+\begin{equation}
+    \delta G_{\mu\nu} = 8\pi G \, \delta T_{\mu\nu},
+\end{equation}
+\emph{Write down the most general linear perturbation that is compatible with the spatial symmetries of an FRW background, 
+and then decompose every spatial object into irreducible pieces.} Background is homogeneous and isotropic $\rightarrow$ spatial rotations 
+(plus translations) act as a symmetry group. Irreducible representations of $SO(3)$ are labelled by spin: 0 scalars, 1 vectors and 2 tensors. Use conformal time in the metric.
+\begin{eqopt}\label{eq:fullMetric}
+    \frac{ds^2}{a^2} = \left(1 + 2\Phi\right) d\tau^2 +2\left(B_{,i} + S_{i}\right)  d\tau dx^i - \left[(1 - 2\Psi)\delta_{ij} -2 E_{,ij} -F_{i,j}-F_{j,i}- h_{ij}\right ]  dx^i dx^j 
+\end{eqopt} \vspace{-5mm}
+\begin{eqopt}\label{eq:metricPT}
+\delta g_{00} = 2a^2 \Phi \qquad \delta g_{0i} = a^2 \left(B_{,i} + S_i\right)\qquad \delta g_{ij} = a^2 \left(2\Psi \delta_{ij}+2E_{,ij}+F_{i,j}+F_{j,i}+ h_{ij}\right) 
+\end{eqopt}
+$S_i$, $F_i$ and $h_{ij}$ are transverse because they come from the decomposition of $V_i= \partial_i V + V^{\perp}_i$ and $W_{ij}=W\delta_{ij}+\partial_i\partial_j W+ \partial_i W_j + \partial_j W_i + W^{\perp}_{ij} = 0$ (Helmholtz theorem):
+\begin{eqopt}[darkred]
+    S^i_{,i} = 0 \qquad F^i_{,i} = 0 \qquad h^i_{j,i} =0 = h^i_i
+\end{eqopt}
+$\delta g_{\mu\nu}$ is symmetric thus has 10 d.o.f., indeed we have 4 scalar, 2 vector (with 2 d.o.f. each) and 1 tensor (with $3(3+1)/2 - 1 -3 = 2$ d.o.f.) perturbations: 10 functions specifying the perturbation. Not all are independent, though. 
+The gauge freedom of the metric allows us to set some of them to zero\footnote{The gauge freedom of the metric is a consequence of the diffeomorphism invariance of GR. We can always choose a coordinate system in which the metric takes a certain form. This is called a gauge choice.}.
+
+\begin{equation}
+    x^\mu \rightarrow \tilde{x}^{\mu} = x^{\mu} + \xi^{\mu}(x) \qquad \text{gives} \qquad \tilde{g}_{\mu\nu}(\tilde{x}) = \frac{\partial x^\rho}{\partial\tilde{x}^\mu}\frac{\partial x^\sigma}{\partial\tilde{x}^\nu}g_{\rho\sigma}(x)
+\end{equation}
+From this and equation~\eqref{perturbation} you can see that the perturbation transforms as
+\begin{equation}
+    \delta \tilde{g}_{\mu\nu} = \delta g_{\mu\nu} - \tilde{g}_{\mu\nu,\sigma} \xi^\sigma - \tilde{g}_{\mu\sigma} \xi^\sigma_{,\nu} - \tilde{g}_{\nu\rho} \xi^\rho_{,\mu} 
+\end{equation}
+Expand $\xi^\mu = \left(\xi^0,\xi^i_\perp+\xi^{,i}\right)$ using Helmholtz decomposition. Find $\delta \tilde{g}_{00}, \delta \tilde{g}_{0i}, \delta \tilde{g}_{ii} $.   
+
+
+%%Tensor Perturbations
+%\begin{mycolorbox}[purple!30!red]
+%    \textbf{Tensor perturbations:}  
+%
+%    \begin{equation*}
+%        ds^2=a^2\left\{d\tau^2 - \left[\delta_{ij}+h_{ij}\right]dx^i dx^j\right\}
+%        \end{equation*}
+%    
+%    $\tilde{h}_{ij} = h_{ij} \; \rightarrow \;$ gauge invariance.  
+%\end{mycolorbox} 

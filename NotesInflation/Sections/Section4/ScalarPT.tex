@@ -1,0 +1,123 @@
+\subsection{Scalar Perturbations}\label{sec:ScalarPT}
+With $\mathcal{L}_\phi= \frac{1}{2}g^{\mu\nu} \partial_\mu \phi \partial_\nu \phi - V$, EMT of a scalar field ($\frac{2}{\sqrt{-g}}\delta S_\phi / \delta g^{\mu\nu}$) is of the perfect fluid form $\,\Rightarrow\,$ we can use hydrodynamical approach of Section~\ref{sec:hydrodynamical_perturbations} to study perturbations during inflation.
+Using Newtonian gauge,~\eqref{eq:fullMetric} becomes (recall found $\Psi=-\Phi$ from Einsteins eq for hydrodynamical perturbations)
+\begin{equation}
+    ds^2 = a^2(\tau) \left\{ \left(1 + 2\Phi\right) d\tau^2  - (1 +2 \Phi)\delta_{ij}  dx^i dx^j \right\} 
+\end{equation}
+Expand \textcolor{mypurple}{$\phi = \bar{\phi}(\tau)+\delta \phi (\tau,\bar{x})$}. Evaluate $\delta T^0_0$, $\delta T^0_i$ and $\delta T^i_j$. To do this expand $(1+2\phi)^{-1}$, $V(\phi)$ and employ KG equation in conformal time for $\bar{\phi}$.
+Impose equalities with correspondent variational quantities for perfect fluid~\eqref{eq:variationsTPF} and also non variational ones.
+\begin{equation}
+   \delta \rho= a^{-2} \left[-\Phi \bar{\phi}'^{\,2} +  \bar{\phi}' \delta \phi'- \delta \phi \left( \bar{\phi}'' + 2 \frac{a'}{a}\bar{\phi}'\right)\right] \qquad \delta P = a^{-2} \left(\bar{\phi}' \delta \phi'- \Phi \bar{\phi}'^{\,2} \right) -V_{,\phi} \delta \phi
+\end{equation}
+\begin{equation}
+    - (\bar{\rho}+\bar{P})\delta v_i = -\frac{\bar{\phi}^{\prime^2}}{a^2} \overset{!}{=} \frac{\bar{\phi}^{\prime}}{a^2} \partial_i \delta \phi \; \Rightarrow \; \delta v_i = -\frac{ \partial_i \delta \phi}{\bar{\phi}^{\prime}} \; \Rightarrow \;  \textcolor{darkred}{\delta v = -\frac{\delta \phi}{\bar{\phi}^{\prime}}}
+\end{equation}
+\emph{Thus in the comoving frame, in which $\delta v = 0$, $\delta \phi = 0 \; \Rightarrow$ inflation is constant in space.}
+Equations~\eqref{eq:hydro1} \-~\eqref{eq:hydro3} can then be rewritten as:
+\begin{align}
+        &\Delta\Phi - 3\frac{a'}{a}\Phi' - 3\!\left(\frac{a'}{a}\right)^{2}\!\Phi
+          = -\,4\pi G\,\bar{\phi}'^{\,2}\Phi
+             + 4\pi G \left[ \bar{\phi}' \delta \phi'- \delta \phi \left( \bar{\phi}'' + 2 \frac{a'}{a}\bar{\phi}'\right)\right] \label{eq:00INFLPT}\\[6pt]
+        %
+        &\Phi' + \frac{a'}{a}\Phi = 4\pi G\,\bar{\phi}'\,\delta\phi \label{eq:0iINFLPT} \\[6pt]
+        %
+        &\Phi'' + 3\frac{a'}{a}\Phi' + 2\frac{a''}{a}\Phi - \left(\frac{a'}{a}\right)^{2}\!\Phi
+          = 4\pi G\,a^{2}\!
+             \bigl[a^{-2}\bigl(\bar{\phi}'\,\delta\phi' - \bar{\phi}'^{\,2}\Phi\bigr)
+                    - V_{,\phi}\,\delta\phi\bigr]
+\end{align}
+3 equations, 2 unknowns ($\Phi,\delta \phi$). Work with the first two. In flat Universe,~\eqref{00} -~\eqref{11} (or simply manipulation of KG equation, see Section~\ref{sec:slowRollInfl}) gives 
+\begin{equation}
+    \dot{H} = -4\pi G \dot{\bar{\phi}}^{\,2} \; \Rightarrow \; -4\pi G\bar{\phi}'^{\,2} = \frac{a''}{a}-2\frac{a'^{\,2}}{a^2}
+\end{equation}
+~\eqref{eq:00INFLPT} can thus be rewritten as (use~\eqref{eq:0iINFLPT} to rewrite $\Phi$)
+\begin{equation}
+    \Delta \Phi = 4\pi G \frac{a}{a'}\bar{\phi}'^{\,2} \frac{d}{d \tau}\left(\Phi + \frac{a'}{a \bar{\phi}'}\delta \phi\right)
+\end{equation}
+Define the \textit{Mukhanov-Sasaki variable} 
+%
+\begin{eqopt}[darkgreen]
+    u \equiv z\Phi + z\frac{a'}{a \bar{\phi}'} \delta \phi \qquad z \equiv \frac{a^2 \bar{\phi}'}{a'}  \textcolor{black}{= \sqrt{2\epsilon} a \quad \Rightarrow \quad u = z\Phi + a\delta \phi}
+\end{eqopt}
+So that 
+\begin{equation}\label{eq:final00INFLPT}
+    \Delta \Phi = 4\pi G \frac{\bar{\phi}'}{a}z  \frac{d}{d \tau}\left(\frac{u}{z}\right)
+\end{equation}
+Now rewrite~\eqref{eq:0iINFLPT} in terms of $u$:
+\begin{equation}\label{eq:final0iINFLPT}
+   \frac{a'}{a^2} \frac{d}{d \tau}\left(\frac{a^3}{a'} \Phi\right) = 4 \pi G \bar{\phi}' u
+\end{equation}
+~\eqref{eq:final00INFLPT} and~\eqref{eq:final0iINFLPT} can be combined to get \textit{Mukhanov-Sasaki equation}
+\begin{eqopt}\label{eq:MS}
+    u'' - \frac{z''}{z}u -\Delta u=0
+\end{eqopt} 
+\emph{Scalar perturbations behave as an harmonic oscillator with mass $m^2_{\text{eff}} = -z''/z$}.
+
+\textcolor{darkred}{MS equation can be equivalently derived by expanding $S= \bigintsss d^4x \sqrt{-g}\left(\frac{1}{2} g^{\mu\nu} \partial_\mu \phi \partial_\nu \phi - V\right)$ up to second order in $\Phi$ and $\delta \phi$.}
+Then, when requiring a canonical form for the kinetic term, one is lead to define $u$ and $z$ to obtain 
+\begin{equation}\label{eq:ScalarPTAction}
+    S = \frac{1}{2}\int d\tau d^3x \left(  u'^{\,2} - \frac{z''}{z}u^2 -(\partial_i u)^2  \right)
+\end{equation}
+$\delta S / \delta u =0$ reproduces~\eqref{eq:MS}.
+
+Notice that MS equation has a similar form to~\eqref{eq:EOMvk} in dS spacetime. In order to make this similarity more explicit 
+evaluate $z'/z$ in terms of $\eta$ and $\epsilon$, then same for $z''/z$ (recall that here the results are not expanded, they are exact).
+So that you can define $\nu^2 -1/4 \equiv -\tau^2 m_{\text{eff}} $ (knowing the expression for $\nu$ in terms of $\epsilon$, $\eta$) with the same intent as in dS space. So that, expanding $u$ in fuourier modes $\int \frac{d^3k}{(2\pi)^{3/2}} u_{\vec{k}}(\tau) e^{i\vec{k}\cdot\vec{x}}$ and then $u(\vec{x}, \tau) = \frac{1}{\sqrt{2}} \int \frac{d^3 k}{(2\pi)^{3/2}} \left[ a^-_k v_k^*(\tau) e^{i \vec{k} \cdot \vec{x}} + a_k^+ v_k(\tau) e^{-i \vec{k} \cdot \vec{x}} \right]$
+\begin{eqopt}[darkred]
+    v''_k+ \left(k^2- \frac{\nu^2-1/4}{\tau^2}\right) v_k =0 \quad  \textcolor{black}{with} \quad \nu = \frac{3}{2} + \epsilon + \frac{\eta}{2}
+\end{eqopt}
+Again, as in~\eqref{sec:dS}, Hankel functions are solution, and you impose Bunch-Davies vacuum at $\abs{k\tau} \gg 1$ obtaining as a consequence the Bunch-Davies mode functions
+\begin{equation}
+    v_k(\tau) = \frac{\sqrt{\pi}}{2}\sqrt{-\tau}\, H^{(2)}_\nu (-k\tau) \;\textcolor{darkred}{\overset{k\ll aH}{\approx} \, 2^{\nu-1}\frac{i}{\sqrt{aH}} \left(\frac{k}{aH}\right)^{-\nu}\frac{\Gamma(\nu)}{\sqrt{\pi}}}
+\end{equation}
+Because we have the following limit form for Hankel functions (which fixes $C_1$ and $C_2$):
+\begin{equation}
+    H_\nu^{(1,2)}(x \rightarrow \infty) = \sqrt{\frac{2}{\pi}}\frac{1}{\sqrt{x}} e^{\pm i x} e^{\pm i \pi (\nu + 1/2)/2}  
+\end{equation}
+
+Define the \textit{comoving curvature} \textcolor{darkgreen}{$R\equiv - \Phi -a \delta \phi /z $}$= u/z$; it is the \emph{spatial curvature on constant inflation hypersurfaces}. 
+Define also 
+\begin{eqopt}[darkgreen] 
+    P_{R_k} \equiv z^{-2}P_{v_k} \textcolor{black}{= |v_k|^2 / (2\epsilon a^2) \; \overset{k\ll aH}{\approx} \, \frac{2^{\,2\nu-3}}{\pi\,\epsilon\,a^{2}k}\!
+        \left(\frac{k}{aH}\right)^{1-2\nu}\Gamma^{2}(\nu) \propto k^{-3}} 
+\end{eqopt}
+This in turn leads to the definition of the \textit{dimensionless power spectrum of curvature perturbations} 
+\begin{eqopt}[darkgreen]
+\Delta_{s}^{2} \equiv \frac{k^{3}}{2\pi^{2}}\,P_{R_k}\; \textcolor{black}{\overset{\text{slow roll}}{\approx} \frac{H^{2}}{8\pi^{2}\epsilon}\!
+\left(\frac{k}{aH}\right)^{3-2\nu}
+\equiv \mathcal{A}_{s}\!\left(\frac{k}{k_{*}}\right)^{n_{s}-1}} 
+\end{eqopt}        
+Where we defined also the \textit{amplitude of scalar perturbations} and the \textit{spectral index}
+\begin{eqopt}[darkgreen]
+A_{s} = \frac{H^{2}}{8\pi^{2}\epsilon} \qquad n_s -1 \equiv 3 - 2\nu \; \textcolor{black}{= -2\epsilon-\eta}
+\end{eqopt}
+Observations of CMB constrain \textcolor{blue}{$\mathcal{A}_{s} \simeq 2 \cdot 10^{-9}$} and \textcolor{blue}{$n_{s} \simeq 0.96$}. Thus our Universe is said to be slightly \textit{red tilted}.
+\begin{center}
+    \begin{tikzpicture}[>=Stealth,thick]
+    % axes
+    \draw[->] (0,0) -- (8,0) node[below] {$k$};
+    \draw[->] (0,0) -- (0,5) node[left] {$\Delta_s$};
+  
+    % central crossing point at (k*, ε_s)
+    \coordinate (kp) at (4,2.5);
+    \fill (kp) circle (2pt);
+  
+    % the three straight‐line segments
+    \draw (0,4) -- (8,1);       % downward slope (n_s < 1 on right)
+    \draw (0,1) -- (8,4);       % upward slope   (n_s > 1 on right)
+    \draw (0,2.5) -- (8,2.5);   % horizontal      (n_s = 1)
+  
+    % vertical tick & label at k = k*
+    \draw (4,0.1) -- (4,-0.1);
+    \node[below] at (4,0) {$k_*$};
+  
+    % y‐axis labels
+    \node[left]  at (0,2.5) {$A_s$};
+  
+    % labels at the right ends of each line
+    \node[right] at (8,4)   {$n_s>1$, \textit{\textcolor{blue!80!black}{blue} tilted  spectrum}};
+    \node[right] at (8,2.5) {$n_s=1$, \textit{scale invariant spectrum}};
+    \node[right] at (8,1)   {$n_s<1$, \textit{\textcolor{red!80!black}{red} tilted  spectrum}};
+  \end{tikzpicture}
+\end{center}
+  

@@ -1,0 +1,83 @@
+We derive here the full expression of $\delta \bar{S}$ used in \textit{proof}~\ref{proof:BD}.
+
+\noindent
+In our conventions, the components of the Ricci tensor are defined as it follows
+\begin{equation}
+    R_{\mu\nu} = \partial_{\lambda}\Gamma^{\lambda}_{\mu\nu} 
+           - \partial_{\nu}\Gamma^{\lambda}_{\mu\lambda} 
+           + \Gamma^{\lambda}_{\mu\nu}\Gamma^{\tau}_{\lambda\tau} 
+           - \Gamma^{\tau}_{\mu\lambda}\Gamma^{\lambda}_{\nu\tau}
+\end{equation}
+and the Christoﬀel symbols are given by
+\begin{equation}
+    \Gamma^{\sigma}_{\mu\nu} = \frac{1}{2}\,g^{\sigma\lambda}
+    \bigl(\partial_{\nu}g_{\mu\lambda} + \partial_{\mu}g_{\nu\lambda} - \partial_{\lambda}g_{\mu\nu}\bigr)
+\end{equation}
+We can then compute the variation of $R$ as 
+\begin{align}
+    \delta R_{\mu\nu} &= \partial_{\lambda} \delta \Gamma^{\lambda}_{\mu\nu}
+                  - \partial_{\nu} \delta\Gamma^{\lambda}_{\mu\lambda}
+                  + \delta\bigl(\Gamma^{\lambda}_{\mu\nu}\bigr) \Gamma^{\tau}_{\lambda\tau}
+                  + \Gamma^{\lambda}_{\mu\nu} \delta\bigl(\Gamma^{\tau}_{\lambda\tau}\bigr) 
+                  - \delta\bigl(\Gamma^{\tau}_{\mu\lambda}\bigr)\Gamma^{\lambda}_{\nu\tau}  
+                  - \Gamma^{\tau}_{\mu\lambda}\delta\bigl(\Gamma^{\lambda}_{\nu\tau}\bigr) \nonumber \\[6pt]
+    &= \nabla_{\lambda}\bigl(\delta\Gamma^{\lambda}_{\mu\nu}\bigr) 
+                  - \nabla_{\nu}\bigl(\delta\Gamma^{\lambda}_{\mu\lambda}\bigr)
+\end{align}
+One can show the last equality by direct computation of the covariant derivative of the variations of the Christoﬀel symbols, noting that
+\begin{equation}
+    \nabla_{\nu}\bigl(\delta\Gamma^{\lambda}_{\mu\lambda}\bigr) = \partial_{\nu}\bigl(\delta\Gamma^{\lambda}_{\mu\lambda}\bigr) + \cancel{\Gamma^{\lambda}_{\tau\nu}\delta\Gamma^{\tau}_{\mu\lambda}} - \Gamma^{\tau}_{\tau\nu}\delta\Gamma^{\lambda}_{\tau\lambda} - \cancel{\Gamma^{\tau}_{\lambda\nu}\delta\Gamma^{\lambda}_{\mu\tau}}
+\end{equation}
+Therefore, we can rewrite $\delta \bar{S}$ as
+\begin{equation}\label{eq:deltaS1}
+    \delta \bar{S} = \int_{\mathcal{M}} d^{4}x \,\sqrt{|g|}\,\phi\, g^{\mu\nu}\,\delta R_{\mu\nu} =
+    \int_{\mathcal{M}} d^{4}x \,\sqrt{|g|}\,\phi\, g^{\mu\nu}
+\Bigl[ \nabla_{\lambda}\bigl(\delta\Gamma^{\lambda}_{\mu\nu}\bigr)
+      - \nabla_{\nu}\bigl(\delta\Gamma^{\lambda}_{\mu\lambda}\bigr)\Bigr]
+\end{equation}
+Employing the chain rule,
+\begin{align}
+    \phi g^{\mu\nu}\nabla_{\lambda}(\delta\Gamma^{\lambda}_{\mu\nu})
+  &= \nabla_{\lambda}\!\bigl(\phi g^{\mu\nu}\delta\Gamma^{\lambda}_{\mu\nu}\bigr)
+   -   (\nabla_{\lambda}\phi)\,g^{\mu\nu}\delta\Gamma^{\lambda}_{\mu\nu} \label{eq:RHStotDeriv1}\\[6pt]
+ \phi g^{\mu\nu}\nabla_{\nu}(\delta\Gamma^{\lambda}_{\mu\lambda})
+  &= \nabla_{\nu}\!\bigl(\phi g^{\mu\nu}\delta\Gamma^{\lambda}_{\mu\lambda}\bigr)-(\nabla_{\nu}\phi)\,g^{\mu\nu}\delta\Gamma^{\lambda}_{\mu\lambda} \label{eq:RHStotDeriv2}
+\end{align}
+and we can see that the first term of the RHS of~\eqref{eq:RHStotDeriv1} vanishes upon integration (analogue reasoning for~\eqref{eq:RHStotDeriv2}), due
+to the requirement of the stationary action principle:
+\begin{equation}
+    \int_{\mathcal{M}} d^{4}x \,\sqrt{|g|}\,
+\nabla_{\lambda}\!\bigl(\phi g^{\mu\nu}\delta\Gamma^{\lambda}_{\mu\nu}\bigr)
+  = \int_{\partial\mathcal{M}} d\sigma_{\lambda}\,\phi g^{\mu\nu}
+     \delta\Gamma^{\lambda}_{\mu\nu} = 0
+\end{equation}    
+Using this result, equation~\eqref{eq:deltaS1} becomes
+\begin{equation}
+    \delta \bar{S} = \int_{\mathcal{M}} d^{4}x \,\sqrt{|g|}\,\nabla_\lambda\phi
+    \Bigl[ g^{\mu\lambda}\delta\Gamma^{\nu}_{\mu\nu}
+          - g^{\mu\nu}\delta\Gamma^{\lambda}_{\mu\nu}\Bigr]
+\end{equation}
+By direct computation we can see that
+\begin{align}
+    g^{\mu\lambda}\,\delta\Gamma^{\nu}_{\mu\nu}
+            - g^{\nu\mu}\,\delta\Gamma^{\lambda}_{\mu\nu}
+      &= -\frac{1}{2} g^{\mu\lambda}g_{\nu\tau}\nabla_\mu \Bigl(\delta g^{\nu\tau}\Bigr) + \frac{1}{2} g^{\mu\nu}\Bigl[g_{\nu\tau}     
+        \nabla_\mu \Bigl(\delta g^{\lambda\tau}\Bigr) \nonumber\\[6pt] 
+        &+ g_{\mu\tau} \nabla_\nu \Bigl(\delta g^{\lambda\tau}\Bigr) -  g_{\mu\tau} g_{\mu\sigma} \nabla^\lambda \Bigl(\delta g^{\tau\sigma}\Bigr) \Bigr] \nonumber\\[6pt]
+      &= \nabla_\mu(\delta g^{\mu\lambda})
+            - g_{\mu\nu}\nabla^\lambda(\delta g^{\mu\nu})
+\end{align}
+Finally, we employ a similar chain rule trick as before to cancel out some boundary terms:
+\begin{align}
+    \nabla_\mu\bigl(\nabla_\nu\phi\,\delta g^{\mu\nu}\bigr)
+      &= \nabla_\mu\nabla_\nu\phi\,\delta g^{\mu\nu}
+         + \nabla_\nu\phi\,\nabla_\mu(\delta g^{\mu\nu}) \\[4pt]
+    \nabla^\lambda\bigl(\nabla_\lambda\phi\,g_{\mu\nu}\,\delta g^{\mu\nu}\bigr)
+      &= \Box\phi\,g_{\mu\nu}\,\delta g^{\mu\nu}
+         + \nabla_\lambda\phi\,g_{\mu\nu}\,\nabla^\lambda(\delta g^{\mu\nu})
+    \end{align}
+And we are left with 
+\begin{equation}
+    \delta_g\bar{S} = \int_{\mathcal{M}}\! d^{4}x\,\sqrt{|g|}\,
+         \delta g^{\mu\nu}\bigl(g_{\mu\nu}\Box - \nabla_\mu\nabla_\nu\bigr)\phi
+\end{equation}

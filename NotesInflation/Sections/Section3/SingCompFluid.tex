@@ -1,0 +1,89 @@
+\subsection{Single Component Fluid}\label{sec:SingCompFluid}
+
+Take~\eqref{eq:hydro3} - $c_s^2$~\eqref{eq:hydro1} to isolate $\Phi$:
+\begin{equation}
+    \Phi'' + 3 \frac{a'}{a} (1 + c_s^2) \Phi' - c_s^2 \Delta \Phi + \left[ 2 \frac{a''}{a} - \left( \frac{a'}{a} \right)^2 (1 - 3c_s^2) \right] \Phi = 0
+\end{equation}
+Note that, in a single fluid Universe, $c_s^2 = \omega$ because $\omega$ is constant! (except during transition periods). Combining this with the zeroth order equations~\eqref{00} -~\eqref{11} (substitute in conformal time) results in 
+\begin{eqopt}[darkred] \label{eq:MassTermPhi}
+    2\frac{a^{\prime\prime}}{a} - \left(\frac{a^\prime}{a}\right)^2 \left(1-3c_s^2\right) = -8\pi G a^2 \left(\bar{P} -c^2_s\bar{\rho}\right) =0
+\end{eqopt}
+and thus leads to the equation of state for a single component fluid:
+\begin{eqopt}\label{eq:singcompfluid}
+    \Phi'' + 3 \frac{a'}{a} (1 + c_s^2) \Phi' - c_s^2 \Delta \Phi = 0  
+\end{eqopt}
+
+Note that~\eqref{eq:MassTermPhi} gives 
+\begin{equation}\label{eq:aTau}
+    a \propto \tau^{2/(1+3\omega)} 
+\end{equation}
+%Non Relativistic Matter
+\begin{mycolorbox}[green!70!blue]
+    \textbf{Non-relativistic matter:} \hfill $\bar{P}=0$
+    
+    From~\eqref{eq:aTau} you have $a\propto \tau^2 \; \Rightarrow \;$~\eqref{eq:singcompfluid} becomes
+    \begin{equation}
+        \Phi = C_1 + C_2 \tau^{-5}
+    \end{equation}
+    $C_1$ and $C_2$ of course can be function of $x^i$. Using~\eqref{eq:hydro1} and dividing by~\eqref{00} (remember to transform it in conformal time!) we find
+    \begin{equation}
+     \frac{\delta \rho}{\bar{\rho}} = \frac{1}{6}\left[ \left(\Delta C_1 \tau^2 -12  C_1\right) + \left(\Delta C_2 \tau^2-18 C_2\right)\frac{1}{\tau^5}\right]
+    \end{equation}  
+    Using $C_{1,2} \propto e^{i\vec{k}\vec{x}}\, \Rightarrow \, \Delta C_{1,2} = -k^2 C_{1,2}$,
+    \begin{itemize}
+        \item Super-horizon scales $k \tau \ll1$: neglect decaying mode $\Rightarrow  \frac{\delta \rho}{\bar{\rho}} \sim -2C_1 \sim -2\Phi$
+        \item Sub-horizon scales  $k \tau \gg1$: $\frac{\delta \rho}{\bar{\rho}} \sim -\frac{k^2}{6}\left( C_1 \tau^2 +\frac{C_2}{\tau^3}  \right) $
+    \end{itemize}
+\end{mycolorbox}
+
+%Ultra Relativistic Matter
+\begin{mycolorbox}[yellow!70!blue]
+    \textbf{Ultra relativistic matter:} 
+    
+    Use~\eqref{eq:aTau} to rewrite~\eqref{eq:singcompfluid}, then go to Fourier space $\Phi = \bigintsss \frac{d^3k}{(2\pi)^{3/2}} \Phi_k(\tau) e^{i\vec{k}\vec{x}}$:
+    \begin{equation}
+        \Phi''_k + \frac{6}{1+3\omega}\frac{1}{\tau} \Phi'_k + k^2 \omega \Phi_k = 0
+    \end{equation}
+    Solution is in terms of (ordinary) Bessel functions:
+    \begin{equation}
+        \Phi_{k} = \tau^{-\nu}
+               \Bigl[
+                  C_{1}\,J_{\nu}\!\bigl(\sqrt{\omega}\,k\,\tau\bigr)
+                + C_{2}\,Y_{\nu}\!\bigl(\sqrt{\omega}\,k\,\tau\bigr)
+               \Bigr] \quad  \text{with}\quad \nu = \frac{1}{2}\,\frac{5 + 3w}{1 + 3w}
+    \end{equation}
+    $\omega_\gamma = \frac{1}{3} \,\Rightarrow\, \nu>0$, with this condition one can evaluate the limits for $J$ and $Y$ $\rightarrow 0$
+    \begin{itemize}
+        \item Super-horizon scales $k \tau \ll1$: $J_{\nu}(x\rightarrow0)\sim x^\nu$, $Y_{\nu}(x\rightarrow0)\sim x^{\nu}-x^{\nu}$ \\ $\tau^{-\nu}$ negligible in this regime. Hence $\Phi_k \sim const \,\Rightarrow \Phi = \Phi(\vec{x})\,$, use~\eqref{eq:hydro1} and divide by~\eqref{00} $\Rightarrow \, \frac{\delta \rho}{\bar{\rho}} \sim -2\,\Phi$
+        \item Sub-horizon scales  $k \tau \gg1$:  Use~\eqref{eq:hydro1}, in LHS $\Delta \Phi$ dominates $\Rightarrow \frac{\delta\rho}{\rho} \propto \Phi_k a^2/a'^2$\\
+        $J_{\nu}(x\rightarrow \infty)\sim x^{-1/2}\cos{x}$, $Y_{\nu}(x\rightarrow \infty)\sim x^{-1/2}\sin{x} \\\Rightarrow\,\Phi_{k} \propto \tau^{-\,\nu-\frac{1}{2}}\,
+        e^{\pm i\,\sqrt{\omega} k\,\tau} \,\Rightarrow\, \frac{\delta \rho}{\bar{\rho}} \propto \tau^{\frac{3}{2}-\nu}\, e^{\pm i\,\sqrt{\omega} k\,\tau}$ . In a radiation dominated background $\nu = 2/3$ $\Rightarrow \frac{\delta\rho}{\bar{\rho}} \propto e^{\pm i\,\frac{k}{\sqrt{3}}\,\tau} \,$, i.e. acoustic oscillations.
+    \end{itemize}
+\end{mycolorbox}
+
+%Matter & Rasdiation
+\begin{mycolorbox}[gray!70!blue]
+    \textbf{Matter and radiation:} 
+    
+    In this case, $\omega$ is not constant, but it is a function of time because $p(\rho)$. It can be shown that, in a \textit{generic background} on \textit{super-horizon scales},~\eqref{eq:singcompfluid} is solved by
+    \begin{eqopt}[darkred]\label{eq:PhiGen}
+     \Phi = A \frac{d}{dt} \left( \frac{1}{a} \int a dt \right)
+    \end{eqopt}
+    Find scale factor evolution in matter-radiation Universe solving the Cauchy problem of~\eqref{00} (in conformal time). To do this, write $\rho_{tot}=\rho_m+\rho_\gamma= \rho_{m_{eq}}(a_{eq}/a)^3+\rho_{\gamma_{eq}}(a_{eq}/a)^4$, $\Omega_{m_eq}=\Omega_{\gamma_eq}$\textcolor{blue}{$\simeq 1/2$}, \textcolor{darkgreen}{$\tau_*\equiv \tau_{eq}/(\sqrt{2}-1)$}.
+\begin{equation}
+    a = a_{\mathrm{eq}}\!\left[\left(\frac{\tau}{\tau_{\mathrm{eq}}}\right)^{2}
+      + 2\left(\frac{\tau}{\tau_{\mathrm{eq}}}\right)\right]
+\end{equation}
+    Plug this into~\eqref{eq:PhiGen} and define $x\equiv \tau/\tau_*$. Keep constants $A$, $B$. Eventually set $B=0$:
+    \begin{equation}
+        \Phi = \frac{x + 1}{(x + 2)^{3}}
+         A\!\left(\frac{3}{5}x^{2} + 3x + \frac{1}{x + 1} + \frac{13}{3}\right)  
+    \end{equation}
+    Notice that $x \rightarrow 0$ is radiation domination, while $x\rightarrow \infty$ is matter domination. 
+    Hence, taking the limits, $\Phi_{\mathrm{matter}}/\Phi_{\mathrm{rad}} = 9/10$.
+    Now compute $\delta \rho_{tot}/ \bar{\rho}_{tot}$ using~\eqref{eq:hydro1}. Use $\Phi'\approx 0$ (it's non-zero only around $\tau_{eq}$). $\delta \rho_{tot}/ \bar{\rho}_{tot}=-2\Phi$
+\end{mycolorbox}
+
+    
+
+    

@@ -1,1 +1,185 @@
-\subsection{}
+\subsection{Slow Roll Inflation}\label{sec:slowRollInfl}
+We will assume that the field is homogeneous to zeroth order, consisting
+of $\phi(t)+\delta\phi(t,\vec{x})$. Action for a scalar field $\phi$ with potential $V(\phi)$ in a FLRW universe 
+\begin{eqopt}
+    S = \int d^4x \sqrt{-g} \Bigg[ \frac{M_{P}^2}{2} R + \underbrace{\frac{1}{2} g^{\mu\nu} \partial_\mu \phi \, \partial_\nu \phi - V}_{\mathcal{L}} \Bigg]
+\end{eqopt}
+Knowing that, with mostly minus convention (then \underline{assume $k=0$}):
+\begin{eqopt}[red]
+R_{00}  =  \partial_0  \Gamma^k {}_{0 k}-\partial_k \Gamma^k {}_{0 0}  + \Gamma^\sigma {}_{0 k} \Gamma^k {}_{\sigma 0} - \Gamma^k {}_{k \sigma} \Gamma^\sigma {}_{0 0}   = 3 \frac{\ddot{a}}{a} \qquad R = 6 \left( \frac{\ddot{a}}{a} + \left( \frac{\dot{a}}{a} \right)^2 + \frac{k}{a^2} \right)
+\end{eqopt}
+Its equations of motion are given by the Einstein equations and the Klein-Gordon equation
+\begin{equation}
+   H^2 = \frac{1}{3M^2_P} \left(\frac{\dot{\phi}^2}{2} + V\right) \qquad \ddot{\phi} + 3 H \dot{\phi} = -V_{,\phi}  \label{eqMotionPhi}
+\end{equation}
+(From KG eq you can get $\dot{H} = -\dot{\phi}^2/2 M_{P}^2$). For a perfect fluid \textcolor{darkgreen}{$T^{\mu\nu} = (\rho + P) u^\mu u^\nu + P g^{\mu\nu}$},  
+\begin{equation}
+   \color{darkgreen}T^{\mu\nu} = \frac{2}{\sqrt{g}} \frac{\delta S_{\phi}}{\delta g_{\mu\nu}} \quad \color{black} \Rightarrow \quad  \omega =  \frac{\frac{\dot{\phi}^2}{2} - V(\phi)}{\frac{\dot{\phi}^2}{2} + V(\phi)}
+\end{equation}
+For $V(\phi)\gg \dot{\phi}^2/2 \rightarrow \omega \sim -1 \rightarrow \epsilon \ll 1$ and one has quasi de Sitter expansion. To quantify how long inflation lasts \footnote{$\epsilon$ should stay $\ll 1$ for a relevant physical time: \textcolor{red}{$\dot{\epsilon}\ll \epsilon H$}}, define 
+\textcolor{darkgreen}{$\eta \equiv d\log{\epsilon}/dN$}$\quad\Rightarrow\quad \eta \ll 1$.
+
+Rewrite~\eqref{eqMotionPhi} imposing slow roll approx for potential and field acceleration (vacuum energy dominates $H^2$ and terminal velocity). Then define
+\begin{eqopt}[darkgreen]
+    \epsilon_{V} \equiv \frac{M_{P}^2}{2} \left( \frac{V_{,\phi}}{V} \right)^2 \qquad \eta_{V} \equiv M_{P}^2 \frac{V_{,\phi\phi}}{V}
+\end{eqopt}
+\textcolor{darkred}{$ \epsilon = \epsilon_{V}$} and \textcolor{darkred}{$\eta = -2\eta_{V}+ 4\epsilon_{V}$}. Hence, $V$ must be flat enough to have $V_{,\phi}/V,\quad V_{,\phi\phi}/V\ll 1$.
+
+For each model calculate $\epsilon_V, \eta_V$ and impose $\ll 1$ (for first model just $\epsilon_V$). Then find $\phi(N)$ to get the field value for 60 e-foldings. Rewrite $\epsilon_V(N), \eta_V(N)$
+
+% Large Fields Models
+\begin{mycolorbox}[pink!93!black]
+    \textbf{Large Fields Models:}
+
+    \begin{eqopt}
+        V(\phi) = \lambda_n \phi^n \qquad n>0
+    \end{eqopt}
+    $\phi(N_{tot})\sim 15M_P$ and $\phi(start)\sim \sqrt{2}M_P$.
+    \begin{equation}
+       \epsilon_V = \frac{n}{4N} \qquad \eta_V = \frac{n-1}{2N}
+    \end{equation}
+
+    \begin{center}
+        \begin{tikzpicture}[>=Stealth]
+        \begin{axis}[
+            axis lines=middle,
+            xmin=-4.3,xmax=4.3,
+            ymin=0,ymax=2.25,
+            domain=-3.6:3.6,
+            samples=200,
+            axis line style={->,very thick},
+            tick style={draw=none},
+            xticklabels={}, yticklabels={},
+            xlabel={$\,\phi$},
+            ylabel={$V(\phi)$},
+            xlabel style={below},
+            ylabel style={left},
+            clip=false,
+            width=10cm,height=6cm
+        ]
+      
+          %---- potential ---------------------------------------------------------
+          \addplot[orange!80!black,thick, domain=-3.6:3.6] {0.12*x^2};
+          % ---- tiny dashed continuations -----------------------
+          \foreach \a/\b in {-3.95/-3.6, 3.6/3.95}{%
+          \addplot[orange!80!black,thick,dashed, domain=-4:4] {0.12*x^2};
+          }
+      
+         % -------- rolling ball + down arrow -------------------
+        \addplot[only marks,
+         mark=*,mark options={fill=gray!60!black},very thick,samples=1]
+          coordinates {(3,0.13*3*3)};
+        \draw[->,gray,thick] (axis cs:2.93,1.13) -- (axis cs:2.75,1);
+      
+          %---- vertical dashed cut‑offs -----------------------------------------
+          \addplot[dashed] coordinates {(-2,-0.55) (-2,0.12*4)};
+          \addplot[dashed] coordinates {( 2,-0.55) ( 2,0.12*4)};
+          \node[below left] at (axis cs:-2,0) {$\phi_{\text{end}}$};
+          \node[below right] at (axis cs: 2,0) {$\phi_{\text{end}}$};
+      
+          %---- inflation / no‑inflation regions ----------------------------------
+          % left inflation 
+          \node at (axis cs:-3.2,-0.45) {inflation};
+          % middle -- no inflation
+          \node at (axis cs:0,-0.45) {no inflation};
+          % right inflation 
+          \node at (axis cs:3.2,-0.45) {inflation};
+
+      
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+\end{mycolorbox}    
+
+% Small Fields Hill-top & Inflection Models
+\begin{mycolorbox}[pink!93!black]
+    \textbf{Small Fields Hill-top \& Inflection Models:}
+
+    \begin{eqopt}
+        V(\phi) = V_0 - \lambda_n \phi^n \qquad n>0
+    \end{eqopt}
+    \begin{equation}
+       \epsilon_V = \frac{n^2 \lambda^2}{2V_0^2} \left[n(n-2)N\frac{\lambda}{V_0}\right]^{\frac{2n-2}{2-n}} \qquad \eta_V =- \frac{n-1}{n-2}\frac{1}{N}
+    \end{equation}
+
+    \begin{center}
+        \begin{tikzpicture}[>=Stealth]
+            \begin{axis}[
+                axis lines=middle,
+                domain=-1.25:1.25,
+                samples=400,
+                xmin=-1.75, xmax=1.75,
+                ymin=-1.5, ymax=2.75,          % keep the plateau in view
+                clip=false,                   % let arrow heads stick out
+                axis line style={->,very thick},
+                tick style={draw=none},       % no tick marks
+                xticklabels={}, yticklabels={},
+                xlabel={$\,\phi$},
+                ylabel={$V(\phi)$},
+                xlabel style={below},
+                ylabel style={left},
+                width=12cm, height=6cm        % feel free to resize
+            ]
+              %--- the potentials ------------------------------------
+              \addplot[very thick,orange!80!black]
+                  {1 - x^2};
+              \addplot[very thick,brown!80!black]
+               {1 - 0.4*x^3};   
+              % ---- tiny dashed continuations -----------------------
+              \foreach \a/\b in {-1.45/-1.25, 1.25/1.45}{%
+               \addplot[orange!80!black,thick,dashed, domain=\a:\b] {1 - x^2};
+               }
+                \foreach \a/\b in {-1.45/-1.25, 1.25/1.45}{%
+              \addplot[brown!80!black,thick,dashed,domain=\a:\b]
+                  {1 - 0.4*x^3};  } 
+              \addlegendentry{Hill-top}
+              \addlegendentry{Inflection}           
+    \end{axis}
+  \end{tikzpicture}
+\end{center}
+\end{mycolorbox}
+
+% Plateau Models
+\begin{mycolorbox}[pink!93!black]
+    \textbf{Plateau Models:}
+
+    \begin{eqopt}
+        V(\phi) = V_0 \left( 1 - \alpha e^{-\kappa\phi} \right)^2 
+    \end{eqopt}
+ Neglect $\alpha^2$ terms in $V_\phi$ and $1 - \alpha e^{-\kappa\phi} \sim 1$ in $\epsilon_V$, $\eta_V$
+     \begin{equation}
+       \epsilon_V \sim \frac{1}{2k^2 N^2} \qquad \eta_V \sim - \frac{1}{N}
+    \end{equation}
+
+\begin{center}
+            \begin{tikzpicture}[>=Stealth]
+                \begin{axis}[
+                    axis lines=middle,
+                    domain=-0.5:4.5,
+                    samples=400,
+                    xmin=-1, xmax=5,
+                    ymin=0, ymax=1.5,          % keep the plateau in view
+                    clip=false,                   % let arrow heads stick out
+                    axis line style={->,very thick},
+                    tick style={draw=none},       % no tick marks
+                    xticklabels={}, yticklabels={},
+                    xlabel={$\,\phi$},
+                    ylabel={$V(\phi)$},
+                    xlabel style={below},
+                    ylabel style={left},
+                    width=12cm, height=6cm        % feel free to resize
+                ]
+                  %--- the potential ------------------------------------
+                  \addplot[very thick,orange!80!black]
+                      {(1 - exp(-x))^2};
+                  % ---- tiny dashed continuation -----------------------
+                  \addplot[orange!80!black,thick,dashed,domain=4.57:4.85]
+                      {(1 - exp(-x))^2};   
+                  \addplot[orange!80!black,thick,dashed,domain=-0.65:-0.5]
+                      {(1 - exp(-x))^2};      
+                  %--- plateau annotation -------------------------------
+                  \node[above] at (axis cs:4,1) {plateau};
+        \end{axis}
+      \end{tikzpicture}
+\end{center}
+\end{mycolorbox}

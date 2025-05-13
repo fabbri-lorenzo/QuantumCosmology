@@ -1,0 +1,32 @@
+Stability issues are central in the study of higher-order modifications of general relativity. 
+In particular, the \textit{Ostrogradsky instability}\footnote{The Ostrogradski theorem states that for Lagrangians which depend on derivatives of the fields of order higher than the first one, the associated Hamiltonian is unbounded from below~\cite{Quiros:2019ktw}.}
+constrains modifications of $S_{EH}$ to a substitution $R \rightarrow f (R)$, from which this new kind of theories are named~\cite{Quiros:2019ktw}.
+
+Including the matter degrees of freedom, the action for the $f (R)$ theories reads:
+\begin{equation}\label{eq:actionfR}
+    S_{f(R)} = \int d^4 x \sqrt{-g} \left[f (R)+ \mathcal{L}_m \right]
+\end{equation}
+\noindent
+It may not be immediately clear that the above action is equivalent to a STT, but starting from (here we focus only on the gravitational part of the action)
+\begin{equation}\label{eq:testAction}
+    S=\int d^4x \sqrt{-g} \left[f (\psi)+ (\partial_\psi f) (R-\psi)\right]
+\end{equation}
+one can show that this action is dynamically equivalent to both $S_{f(R)}$ and $S_{BD}$.
+\begin{proof}
+Using the equation of motion for the scalar field $\psi$: $\,(\partial^2_{\psi})f(R-\psi)=0$ one gets $R=\psi$, as in general $\partial^2_{\psi}f\neq 0$. Substituting this into~\eqref{eq:testAction}, we obtain $S_{f(R)}$.
+\noindent
+Now define
+\begin{equation*}
+    \phi= \partial_\psi f \quad \text{and} \quad V(\phi) = \psi(\phi)\phi -f(\psi(\phi))
+\end{equation*}
+Inserting these into~\eqref{eq:testAction} gives $S_{BD}$ with $\omega_{BD}=0$:
+\begin{equation*}
+    S= \int d^4x \sqrt{-g} \left[\psi\phi - V(\phi) + \phi(R-\psi) \right] = \int d^4x \sqrt{-g} \left[ \phi R + V(\phi) \right]
+\end{equation*}
+\end{proof}
+
+The equations of motion for $f(R)$ theories are obtained by varying~\eqref{eq:actionfR} with respect to the metric tensor, which gives
+\begin{equation}\label{eq:EinsteinEqfR}
+    R_{\mu\nu} - \frac{f(R)}{2 \partial_R f}g_{\mu\nu} = \frac{1}{\partial_R f}\left( \nabla_\mu \nabla_\nu - g_{\mu\nu} \Box  \right)\partial_R f + \frac{T_{\mu\nu}^{(m)}}{\partial_R f}
+\end{equation}
+The derivation of this equation is carried out in an analogous fashion to the one of Brans–Dicke theory, again removing boundary terms coming from $\delta R_{\mu\nu}$.

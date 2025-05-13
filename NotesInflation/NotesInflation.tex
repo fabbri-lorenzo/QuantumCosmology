@@ -6,37 +6,69 @@
 \definecolor{darkred}{rgb}{0.80,0.00,0.00}
 \definecolor{mypurple}{rgb}{0.5, 0, 0.5}
 
+\renewcommand{\chi}{\raisechi}
+\addto\captionsenglish{%
+  \renewcommand{\abstractname}{}%
+}
+
+\title{\Huge\bfseries Notes on Inflationary Cosmology}
+\author{Lorenzo Fabbri}
+\date{\today} 
 % ******************************** Front Matter ********************************
 \begin{document}
-
-\begin{center}
-    \Huge\textbf{Inflationary Cosmology}
-\end{center}
+\maketitle
+\vspace{-1cm}
+\begin{abstract}
+These notes follow the lectures of the \emph{Quantum Cosmology} course held by Professor F.G.\ Pedro at the University of Bologna in the a.y.\ 2024--2025.  
+The notes were written for personal use and are meant to be a useful summary for reviewing the basics of the inflationary framework in cosmology. External sources from which some parts are taken can be found in References section. The metric convention is mostly minus through the whole document, units with $c=1=h$ are employed.
+\end{abstract}
+\thispagestyle{empty}
 
 % Table of Contents with no title and no numbers in front of sections
-\renewcommand{\contentsname}{}
 \renewcommand{\numberline}[1]{}
-\tableofcontents
+% === disable colored links just for TOC ===
+{%
+  \hypersetup{hidelinks}
+  \tableofcontents
+}%
 \vspace{1cm}
-
+\newpage
 \section{Problems of the HBB Model}\label{sec:section1}
 \input{Sections/Section1/FTProblems.tex}
 \input{Sections/Section1/InflSolution.tex}
-
-\section{Basics of Inflation}\label{sec:section2}
+\newpage
+\section{Theories of Inflation}\label{sec:section2}
 \input{Sections/Section2/SlowRoll.tex}
-\input{Sections/Section2/Examples.tex}
+\input{Sections/Section2/P(x,phi).tex}
+\newpage
 
 \section{Quantum Inflation}\label{sec:section3}
+\input{Sections/Section3/Intro.tex}
+
 \input{Sections/Section3/CurvedST.tex}
-\input{Sections/Section3/PerturbTheory.tex}
+\input{Sections/Section3/CosmPT.tex}
+\input{Sections/Section3/HydroPT.tex}
+\input{Sections/Section3/SingCompFluid.tex}
+\newpage
 
-%\section{BOH}\label{sec:section4}
-%\input{Sections/Section}
-%\input{Sections/Section}
-%
-%\section{BOH}\label{sec:section5}
-%\input{Sections/Section}
-%\input{Sections/Section}
+\section{Perturbations During Inflation}\label{sec:section4}
+\input{Sections/Section4/ScalarPT.tex}
+\input{Sections/Section4/TensorPT.tex}
+\input{Sections/Section4/LythBound.tex}
+\input{Sections/Section4/Observables.tex}
 
+\section{The last scattering surface}\label{sec:LST}
+\input{Sections/Section5/Intro.tex}
+\input{Sections/Section5/CMBAnisotropies.tex}
+\input{Sections/Section5/CMBMultipoles.tex}
+\input{Sections/Section5/CMBSWPlateau.tex}
+
+% ********************************** Bibliography ******************************
+\begin{spacing}{0.9}
+
+\cleardoublepage
+\nocite{*}
+\printbibliography[heading=bibintoc, title={References}]
+\thispagestyle{empty}
+\end{spacing}
 \end{document}

@@ -1,0 +1,42 @@
+\subsection{$P(X,\phi)$ theories}\label{sec:Pxphi}
+\textcolor{darkgreen}{$X \equiv 1/2(\partial_{\mu} \phi)^2 \qquad E \equiv 2XP_X -P$}. Action for $P(X,\phi)$ theories is 
+\begin{eqopt}
+    S = \int d^4x \sqrt{g}\left[\frac{M_P^2}{2} R + P (X,\phi)\right]
+\end{eqopt}
+Equations of motion for $g^{\mu\nu}$ and $\phi$ are
+\begin{equation}
+    H^2 = \frac{1}{3M_P^2}E \qquad \dot{E} = -3H\left(E+P\right)
+\end{equation}
+Find expression for $\epsilon$ and condition for $\epsilon \ll 1$.
+
+In fluid mechanics the speed of sound is defined as a derivative of the pressure with
+respect to the density at fixed entropy per particle:
+\textcolor{darkgreen}{$c_s^2 = \frac{\partial P}{\partial \rho}\big|_{s/n}$} .
+It is the velocity at which adiabatic compression and rarefaction waves propagate
+in a medium~\cite{piattellaNoteThermodynamicsSpeed2014}.
+\begin{equation}
+    c_s^2 = \frac{P_X dX + P_\phi d\phi}{\rho_X dX + \rho_\phi d\phi}\Bigg|_{s/n} = \frac{P_X}{\rho_X} = \frac{P_{X}}{P_X + 2XP_{XX}}
+\end{equation}
+As one can prove that $d(s/n)=0$ is equivalent to $d\phi = 0$. In our context, $c_s$ is the speed of scalar perturbations.
+
+%K-Inflation models
+\begin{mycolorbox}[orange!50!black]
+    \textbf{K-Inflation models:}
+
+    Effective kinetic Lagrangian can be written as
+    \begin{eqopt}
+        \mathcal{L} \supset  \sum_{n\geq1}  f(\phi)\frac{X^n}{\Lambda^{4n-4}} 
+    \end{eqopt}
+$\Lambda$ is the cut-off scale of the effective field theory because $\Lambda^4 \gg X$ kills everything execpt the first term, which is the one of slow roll inflation.
+But there are potential problems with ghosts and radiative stability.
+\end{mycolorbox}    
+%DBI Inflation
+\begin{mycolorbox}[orange!50!black]
+    \textbf{Dirac-Born-Infeld Inflation:}
+
+    It is a model of inflation based on the Dirac-Born-Infeld (DBI) action, which describes the dynamics of a D-brane in string theory. 
+    \begin{eqopt}
+        S = -\int d^4x \sqrt{g} \left[ \frac{1}{f(\phi)} \sqrt{1 + f(\phi) \partial_\mu\phi\partial^\mu\phi} - \frac{1}{f(\phi)} + V(\phi) \right]
+    \end{eqopt}
+    The DBI action includes a kinetic term that is non-linear in the field velocity, leading to a speed limit on the field's motion (due to $\sqrt{\dots}$). This non-linear kinetic term can give rise to an effective sound speed that is less than one (which is constrained by observations!), allowing for a more gradual roll of the inflaton field and potentially addressing issues related to the generation of primordial perturbations.
+\end{mycolorbox}    

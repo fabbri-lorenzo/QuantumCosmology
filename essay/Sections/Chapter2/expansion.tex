@@ -1,0 +1,35 @@
+\section{Cosmic Expansion in \texorpdfstring{$f(R)$}{f(R)} Theories}\label{sec:expansion}
+The main ingredient of the inflationary models is a scalar field, called inflaton, that enters Einstein’s equations as an exotic matter field. In this section, we will show how the scalar field can be replaced by a modified gravity theory, in this case $f(R)$ theory, which can produce an accelerated cosmic expansion without the need for an unknown for of dark energy or anti-gravitational matter. 
+
+With flat FRW metric, 
+\begin{equation}
+ds^{2} = -dt^{2} + a(t)^{2}\left(dx^{2} + dy^{2} + dz^{2}\right)
+\end{equation}
+the $00$ and $ii$  equations of motion~\eqref{eq:EinsteinEqfR} can be written respectively as:
+\begin{align}
+3H^{2} &= \frac{1}{f_{,R}}\left(\rho_{m} + \rho_{\mathrm{eff}}\right) \label{eq:EinsteinfRFRW00}\\[4pt] 
+2\dot{H} &= -\frac{1}{f_{,R}}\left(\rho_{m} + p_{m} + \rho_{\mathrm{eff}} + p_{\mathrm{eff}}\right) \label{eq:EinsteinfRFRWii}
+\end{align}
+where $\rho_{m}$ and $p_{m}$ are the energy density and pressure of the matter fields, respectively, and $\rho_{\mathrm{eff}}$ and $p_{\mathrm{eff}}$ are the correspondent ones of the modified gravity sector.
+\begin{align}
+\rho_{\mathrm{eff}} &= \tfrac12\!\left(R f_{,R} - f\right) - 3H\dot{R}\,f_{,RR} \\[6pt]
+p_{\mathrm{eff}} &= f_{,RR}\!\left(\ddot{R} + 2H\dot{R} + \frac{f_{,RRR}}{f_{,RR}}\dot{R}^{2}\right)
+                  + \tfrac12\!\left(f - R f_{,R}\right)
+\end{align}
+For convenience, we defined $f_{,R}\equiv \partial_R f$ , $f_{,RR}\equiv \partial_{RR} f$ and $f_{,RRR}\equiv \partial_{RRR} f$.
+The calculations to get~\eqref{eq:EinsteinfRFRW00} and~\eqref{eq:EinsteinfRFRWii} from~\eqref{eq:EinsteinEqfR} quite lengthy, but straightforward. We just clarify that~\eqref{eq:EinsteinfRFRWii} is obtained by taking $ii - 00$ components of~\eqref{eq:EinsteinEqfR}.
+
+For simplicity, we assume $\rho_m = p_m = 0$. Thus, combining~\eqref{eq:EinsteinfRFRW00} and~\eqref{eq:EinsteinfRFRWii}, we get:
+\begin{equation}
+\frac{\ddot{a}}{a} = -\frac{1}{2f_{,R}}\left(\rho_{\mathrm{eff}} + p_{\mathrm{eff}}\right) + \frac{1}{3f_{,R}} \rho_{\mathrm{eff}} = - \frac{1}{6f_{,R}} \left(\rho_{\mathrm{eff}} + 3p_{\mathrm{eff}}\right)
+\end{equation}
+As $f_{,R} > 0 $ in order to a have a positive gravitational coupling, we can have an accelerated expansion if $\rho_{\mathrm{eff}} + 3p_{\mathrm{eff}} < 0$, which is precisely the violation of the \textit{strong energy condition}. This requirement can be satisfied by choosing a suitable form of $f(R)$\footnote{Besides the already mentioned $f_{,R}>0$ restriction, one also has $f_{,RR}>0$ due to Dolgov-Kawasaki instability, i.e.\ the appearance of a tachyonic (negative-mass-squared) scalaron that would drive the Ricci curvature to grow explosively inside high-density matter~\cite{Dolgov_2003}.}, which shall respect
+\begin{equation}
+    3 f_{,RR}\bigl(\ddot{R} + H\dot{R}\bigr) + 3 f_{,RRR}\dot{R}^{2} + f - R f_{,R} < 0
+\end{equation}
+
+It is also noteworthy that $f(R)$ theories can mimic cosmological constant models, as $\rho_{\mathrm{eff}} = -p_{\mathrm{eff}}$ holds for
+\begin{equation}
+f_{,RR}\bigl(\ddot{R} - H\dot{R}\bigr) + f_{,RRR}\dot{R}^{2} = 0
+\end{equation}
+    

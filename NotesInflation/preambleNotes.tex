@@ -5,7 +5,7 @@
 \usepackage[T1]{fontenc} % codifica dei font
 \usepackage[utf8]{inputenc} % lettere accentate da tastiera
 
-\usepackage{microtype} % migliora riempimento righe - carica sempre
+\usepackage[final,nopatch=footnote]{microtype}% migliora riempimento righe - carica sempre
 
 %\usepackage[dvipsnames]{xcolor}
 
@@ -31,7 +31,8 @@
 \usepackage{tensor} % per tensori e indici alto/basso
 \usepackage{physics}
 \usepackage{bm}
-\newcommand{\openleftinterval}[2]{\left[ #1, #2 \right[}
+\usepackage{interval} % per gli intervalli
+\usepackage{bigints} % per gli integrali
 
 % ******************************************************************************
 % ************************* Tables and Figures *********************************
@@ -46,13 +47,15 @@
 % ************************* TIKZ AND SETTINGS **********************************
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
-\usetikzlibrary{calc,graphs,intersections,plotmarks,shapes,hobby}
+\usepackage{pgfplots}
+\usetikzlibrary{calc,graphs,intersections,plotmarks,shapes,hobby, arrows.meta}
 \usetikzlibrary{decorations.pathmorphing}
 \usetikzlibrary{decorations.pathreplacing,calc}
 \usetikzlibrary{calc,patterns,decorations.markings}
 \usetikzlibrary{positioning}
 \usetikzlibrary{arrows.meta, patterns.meta}
-%\usepackage{pgfplots} 
+\pgfkeys{/tikz/>=Stealth}          % global arrow style
+\pgfplotsset{compat=1.18} 
 %\pgfplotsset{compat=newest}
 
 
@@ -64,6 +67,16 @@
 \usepackage{setspace}
 \usepackage{titlesec} % TO CHANGE SIZE OF SECTIONS, SUBSECTIONS ECC
 \usepackage{fancyhdr}                    % Custom header/footer
+\usepackage{bookmark}
+
+\let\originalchi\chi
+\DeclareRobustCommand{\raisechi}{% To get chi to normal height
+  \mathchoice
+    {\raisebox{\depth}{$\displaystyle         \originalchi$}}%
+    {\raisebox{\depth}{$\textstyle            \originalchi$}}%
+    {\raisebox{\depth}{$\scriptstyle          \originalchi$}}%
+    {\raisebox{\depth}{$\scriptscriptstyle    \originalchi$}}%
+}
 
 % ******************************************************************************
 % ********************* Table of Contents *****************************
@@ -101,9 +114,9 @@
 %\definecolor{darkblue}{HTML}{1F4E79}  % Professional dark blue
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue!70!black,
-    filecolor=blue!70!black,      
-    urlcolor=blue!70!black, 
+    linkcolor=BrightLightBlue,
+    filecolor=BrightLightBlue,      
+    urlcolor=BrightLightBlue, 
     citecolor=BrightLightBlue,
     pdfpagemode=FullScreen}
     
@@ -172,7 +185,6 @@
 %------------------------------------------------
 \pagestyle{fancy}
 \fancyhf{}
-\lfoot{\footnotesize \today \qquad Lorenzo Fabbri}
 \rfoot{\footnotesize \thepage}
 \renewcommand{\headrulewidth}{0pt}
 %\renewcommand{\footrulewidth}{0pt}
@@ -199,3 +211,6 @@
   enlarge left by = 0mm,      % keeps alignment inside lists
   breakable               % allow page breaks inside
 }
+
+
+

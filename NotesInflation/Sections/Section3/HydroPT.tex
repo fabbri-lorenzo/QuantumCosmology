@@ -1,0 +1,53 @@
+\subsection{Hydrodynamical Perturbations}
+\label{sec:hydrodynamical_perturbations}
+
+Hydrodynamical perturbations are not gauge invariant, they are scalar perturbations:
+\begin{equation*}
+    ds^2=a^2\left\{\left(1+2\Phi\right)d\tau^2 +2B_{,i}dx^i d\tau - \left[\left(1-2\Psi\right)\delta_{ij}-2E_{,ij}\right]dx^i dx^j\right\}
+\end{equation*}
+
+Use $\delta \tilde{g}_{00}, \delta \tilde{g}_{0i}, \delta \tilde{g}_{ii} $ to find $\tilde{\Phi},\tilde{B},\tilde{\Psi},\tilde{E}$.
+Then choose $\xi,\xi^0$ so that only two perturbations remain. \textit{Conformal Newtonian gauge} is \textcolor{blue}{E=B=0}.
+
+%EMT Perfect Fluid
+\begin{mycolorbox}[pink!70!red]
+    \textbf{EMT of a perfect fluid:}
+
+    Expand $\rho, P, u^{\mu}$ in terms of the background and perturbations. 
+    
+    $u^0 = \bar{u}^0+\delta u^0, \quad u^i= \frac{dx^i}{ds}= a^{-1}\delta v^i$, as (\textcolor{darkgreen}{$\delta v^i = \frac{dx^i}{d \tau}$}). Impose $\bar{u}^{\mu}\bar{u}_{\mu}=1$, and $u^{\mu}u_{\mu}=1$
+    to get $u_0$ and $u^0$. At first order in perturbations obtain 
+    \begin{eqopt}[darkred]\label{eq:variationsTPF}
+        \delta T^0_0= \delta \rho \qquad \delta T^0_i=-\delta v_i \left(\bar{\rho}+\bar{P}\right) \qquad \delta T^i_j=-\delta^i_j \delta P
+    \end{eqopt}
+    Solve conservation equation $\nabla^\mu T_{\mu\nu}=0$ (employ zeroth order $\bar{\nabla}^\mu \bar{T}_{\mu\nu}=0$) in \textcolor{blue}{$\delta g_{0i}=0$} gauge 
+    (because $B=0$ and I ignore $S_i$ as I am considering scalar perturbations!); to do so expand $\Gamma^{\rho}_{\mu\nu} = \bar{\Gamma}^{\rho}_{\mu\nu} + \delta \Gamma^{\rho}_{\mu\nu}$\footnote{$\delta \Gamma^\rho_{\mu\nu}= \frac{1}{2} g^{\rho \alpha}\left(\nabla_\mu \delta g_{\alpha \nu}+\nabla_\nu \delta g_{\alpha \mu}-\nabla_\alpha \delta g_{\mu \nu}\right)$}
+    and define \textcolor{darkgreen}{$h_{\mu\nu}\equiv a^{-2}g_{\mu\nu}$} $\,\Rightarrow \, g_{\mu \nu} = \bar{g}_{\mu \nu} + a^2 h_{\mu\nu}$
+    
+    E.g. $\delta \Gamma^0_{00} \simeq \frac{1}{2}\bar{g}^{00}\left(\bar{\nabla}_0\delta g_{00}\right)= \frac{1}{2}\delta g^\prime_{00}\frac{1}{a^2}-\delta g_{00}\frac{a^\prime}{a^3}= \frac{1}{2}h_{00}^\prime$
+    \begin{align}
+        &\delta \rho' + 3 \frac{a'}{a} (\delta P + \delta \rho) + (\bar{P} + \bar{\rho}) (\partial_i \delta v^i - \frac{1}{2} h_i^{i\,\prime}) = 0 \label{eq:conservation1}\\
+        &\partial_i \delta P + (\bar{P} + \bar{\rho}) \left( 4 \frac{a'}{a} \delta v_i + \frac{1}{2} \partial_i h_{00} \right) + \left[ \delta v_i (\bar{P} + \bar{\rho}) \right]' = 0
+    \end{align}  
+
+    If the Universe contains multiple non-interacting fluids, each one is conserved separately and these equations hold for each fluid component.
+\end{mycolorbox}    
+
+At first order the Einstein equations are
+\begin{align}
+    \delta G^0_0 &= \frac{2}{a^2} \left( -\Delta \Psi + 3 \frac{a'}{a} \Psi' - 3 \left( \frac{a'}{a} \right)^2 \Phi \right)  \overset{!}{=} 8 \pi G \delta T^0_0 = 8 \pi G \, \delta \rho_{\text{tot}} \\
+    \delta G^0_i &= \frac{2}{a^2}  \left( -\partial_i \Psi' + \frac{a'}{a} \partial_i \Phi \right) \overset{!}{=} 8 \pi G \delta T^0_i = -8 \pi G \,  \delta v_i^{\text{tot}} (\bar{\rho}_{\text{tot}} + \bar{P}_{\text{tot}})\\ 
+    \delta G^i_j &= \frac{1}{a^2} \partial^i\partial_j (\Phi + \Psi) - \frac{2}{a^2} \delta^i_j \Bigg[ -\Psi'' + \frac{1}{2} \Delta (\Phi + \Psi) + \frac{a'}{a} (\Phi' - 2 \Psi') + \frac{2 a''}{a} \Phi \nonumber \\
+    &- \left( \frac{a'}{a} \right)^2 \Phi \Bigg] \overset{!}{=} 8 \pi G \delta T^i_j = -8 \pi G \, \delta^i_j \, \delta P_{\text{tot}} \label{eq:ij}
+\end{align}
+From~\eqref{eq:ij} taking a component with $i\neq j$ we find $\Phi = -\Psi$. Use this and \textcolor{darkred}{$\delta v_i = \partial_i \delta v$}\footnote{You still have residual gauge freedom on $\xi_i^\perp$ to set $\delta v^\perp_i=0$} to simplify the equations.
+Recalling $h_{\mu\nu}$ is related to $\Phi$ by~\eqref{eq:metricPT}, \emph{you have 5 single fluid component ($\lambda$) equations~\eqref{eq:conservation1} -~\eqref{eq:ij} and 4 variables: $\delta \rho_\lambda, \delta P_\lambda, \delta v_\lambda, \Phi$; not all are independent.}
+Below they are rewritten (sometimes use the trick $\partial_i A=\partial_i B \,\Rightarrow \, A=B$)
+\begin{align}
+    &{\color{mypurple}\Delta \Phi - 3 \frac{a'}{a} \Phi' - 3 \left( \frac{a'}{a} \right)^2 \Phi = 4 \pi G \, a^2 \, \delta \rho_{\text{tot}}} \label{eq:hydro1} \\[1ex] 
+    &\Phi' + \frac{a'}{a} \Phi = -4 \pi G \, a^2 \left[ (\bar{\rho} + \bar{P}) \delta v \right]_{\text{tot}} \\[1ex]
+    &{\color{mypurple}\Phi'' + 3 \frac{a'}{a} \Phi' + 2 \frac{a''}{a} \Phi - \left( \frac{a'}{a} \right)^2 \Phi = 4 \pi G \, a^2 \, \delta P_{\text{tot}}} \label{eq:hydro3}\\[1ex]
+    &\delta \bar{\rho}_\lambda^{\text{ }\prime} + 3 \frac{a'}{a} (\delta \rho_\lambda + \delta P_\lambda) + (\bar{\rho}_\lambda + \bar{P}_\lambda) \left( \Delta \delta v_\lambda - 3 \Phi' \right) = 0 \\[1ex]
+    &\delta P_\lambda +\left[ (\bar{\rho}_\lambda + \bar{P}_\lambda) \delta v_\lambda \right]' + 4 \frac{a'}{a} (\bar{\rho}_\lambda + \bar{P}_\lambda) \delta v_\lambda + (\bar{\rho}_\lambda + \bar{P}_\lambda) \Phi = 0
+\end{align}
+Notice that $\Delta \equiv \nabla_i \nabla^i$ is the Laplacian operator in 3D space. For flat FRW spacetime $\Delta = \partial_i \partial^i$ because the connection is trivial as no metric terms depend on $x^i$.

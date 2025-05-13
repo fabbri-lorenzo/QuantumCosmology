@@ -1,2 +1,2 @@
-mv -v ./out/essay.pdf ./essay.pdf
+mv -v ./out/essay.pdf ./STTs.pdf
 rm -r out
