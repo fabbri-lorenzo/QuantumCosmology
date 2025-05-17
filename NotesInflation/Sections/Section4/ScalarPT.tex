@@ -62,7 +62,7 @@ $\delta S / \delta u =0$ reproduces~\eqref{eq:MS}.
 
 Notice that MS equation has a similar form to~\eqref{eq:EOMvk} in dS spacetime. In order to make this similarity more explicit 
 evaluate $z'/z$ in terms of $\eta$ and $\epsilon$, then same for $z''/z$ (recall that here the results are not expanded, they are exact).
-So that you can define $\nu^2 -1/4 \equiv -\tau^2 m_{\text{eff}} $ (knowing the expression for $\nu$ in terms of $\epsilon$, $\eta$) with the same intent as in dS space. So that, expanding $u$ in fuourier modes $\int \frac{d^3k}{(2\pi)^{3/2}} u_{\vec{k}}(\tau) e^{i\vec{k}\cdot\vec{x}}$ and then $u(\vec{x}, \tau) = \frac{1}{\sqrt{2}} \int \frac{d^3 k}{(2\pi)^{3/2}} \left[ a^-_k v_k^*(\tau) e^{i \vec{k} \cdot \vec{x}} + a_k^+ v_k(\tau) e^{-i \vec{k} \cdot \vec{x}} \right]$
+So that you can define $\nu^2 -1/4 \equiv -\tau^2 m_{\text{eff}} $ (knowing the expression for $\nu$ in terms of $\epsilon$, $\eta$) with the same intent as in dS space. So that, expanding $u$ in fuourier modes $\int \frac{d^3k}{(2\pi)^{3/2}} u_{\mathbf{k}}(\tau) e^{i\mathbf{k}\cdot\mathbf{x}}$ and then $u(\mathbf{x}, \tau) = \frac{1}{\sqrt{2}} \int \frac{d^3 k}{(2\pi)^{3/2}} \left[ a^-_k v_k^*(\tau) e^{i \mathbf{k} \cdot \mathbf{x}} + a_k^+ v_k(\tau) e^{-i \mathbf{k} \cdot \mathbf{x}} \right]$
 \begin{eqopt}[darkred]
     v''_k+ \left(k^2- \frac{\nu^2-1/4}{\tau^2}\right) v_k =0 \quad  \textcolor{black}{with} \quad \nu = \frac{3}{2} + \epsilon + \frac{\eta}{2}
 \end{eqopt}
@@ -75,21 +75,21 @@ Because we have the following limit form for Hankel functions (which fixes $C_1$
     H_\nu^{(1,2)}(x \rightarrow \infty) = \sqrt{\frac{2}{\pi}}\frac{1}{\sqrt{x}} e^{\pm i x} e^{\pm i \pi (\nu + 1/2)/2}  
 \end{equation}
 
-Define the \textit{comoving curvature} \textcolor{darkgreen}{$R\equiv - \Phi -a \delta \phi /z $}$= u/z$; it is the \emph{spatial curvature on constant inflation hypersurfaces}. 
+Define the \textit{comoving curvature} \textcolor{darkgreen}{$\mathcal{R}\equiv - \Phi -a \delta \phi /z $}$= -u/z$; it is the \emph{spatial curvature on constant inflation hypersurfaces}. 
 Define also 
 \begin{eqopt}[darkgreen] 
-    P_{R_k} \equiv z^{-2}P_{v_k} \textcolor{black}{= |v_k|^2 / (2\epsilon a^2) \; \overset{k\ll aH}{\approx} \, \frac{2^{\,2\nu-3}}{\pi\,\epsilon\,a^{2}k}\!
+    P_{\mathcal{R}_k} \equiv z^{-2}P_{v_k} \textcolor{black}{= |v_k|^2 / (2\epsilon a^2) \; \overset{k\ll aH}{\approx} \, \frac{2^{\,2\nu-3}}{\pi\,\epsilon\,a^{2}k}\!
         \left(\frac{k}{aH}\right)^{1-2\nu}\Gamma^{2}(\nu) \propto k^{-3}} 
 \end{eqopt}
 This in turn leads to the definition of the \textit{dimensionless power spectrum of curvature perturbations} 
 \begin{eqopt}[darkgreen]
-\Delta_{s}^{2} \equiv \frac{k^{3}}{2\pi^{2}}\,P_{R_k}\; \textcolor{black}{\overset{\text{slow roll}}{\approx} \frac{H^{2}}{8\pi^{2}\epsilon}\!
+\Delta_{s}^{2} \equiv \frac{k^{3}}{2\pi^{2}}\,P_{\mathcal{R}_k}\; \textcolor{black}{\overset{\text{slow roll}}{\approx} \frac{H^{2}}{8\pi^{2}\epsilon}\!
 \left(\frac{k}{aH}\right)^{3-2\nu}
-\equiv \mathcal{A}_{s}\!\left(\frac{k}{k_{*}}\right)^{n_{s}-1}} 
+=\, \mathcal{A}_{s}\!\left(\frac{k}{k_{*}}\right)^{n_{s}-1}} 
 \end{eqopt}        
 Where we defined also the \textit{amplitude of scalar perturbations} and the \textit{spectral index}
 \begin{eqopt}[darkgreen]
-A_{s} = \frac{H^{2}}{8\pi^{2}\epsilon} \qquad n_s -1 \equiv 3 - 2\nu \; \textcolor{black}{= -2\epsilon-\eta}
+\mathcal{A}_{s} \equiv \frac{H^{2}}{8\pi^{2}\epsilon} \qquad n_s -1 \equiv 3 - 2\nu \; \textcolor{black}{= -2\epsilon-\eta}
 \end{eqopt}
 Observations of CMB constrain \textcolor{blue}{$\mathcal{A}_{s} \simeq 2 \cdot 10^{-9}$} and \textcolor{blue}{$n_{s} \simeq 0.96$}. Thus our Universe is said to be slightly \textit{red tilted}.
 \begin{center}
@@ -112,7 +112,7 @@ Observations of CMB constrain \textcolor{blue}{$\mathcal{A}_{s} \simeq 2 \cdot 1
     \node[below] at (4,0) {$k_*$};
   
     % y‐axis labels
-    \node[left]  at (0,2.5) {$A_s$};
+    \node[left]  at (0,2.5) {$\mathcal{A}_s$};
   
     % labels at the right ends of each line
     \node[right] at (8,4)   {$n_s>1$, \textit{\textcolor{blue!80!black}{blue} tilted  spectrum}};

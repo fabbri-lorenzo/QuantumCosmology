@@ -7,16 +7,16 @@ Rescale with \textcolor{darkgreen}{$\chi \equiv a \phi$} and eventually define \
 Action is explicitly time dependent $\Rightarrow$ energy not conserved $\Rightarrow$  particle creation (with energy supplied by the classical gravitational field).
 Get EOM for $\chi$, then expand in Fourier modes:
 \begin{eqopt}
-    \chi(\vec{x},\tau) = \int \frac{d^3k}{(2\pi)^{3/2}} \chi_{\vec{k}}(\tau) e^{i\vec{k}\cdot\vec{x}} \label{Fourier}
+    \chi(\mathbf{x},\tau) = \int \frac{d^3k}{(2\pi)^{3/2}} \chi_{\mathbf{k}}(\tau) e^{i\mathbf{k}\cdot\mathbf{x}} \label{Fourier}
 \end{eqopt}
-Rewrite EOM in terms of $\chi_{\vec{k}}$. Note that $\chi$ is a real number $\Rightarrow \chi_{\vec{k}}^* = \chi_{-\vec{k}}$. EOM just depends on $\abs{\vec{k}}$, general solution is
+Rewrite EOM in terms of $\chi_{\mathbf{k}}$. Note that $\chi$ is a real number $\Rightarrow \chi_{\mathbf{k}}^* = \chi_{-\mathbf{k}}$. EOM just depends on $\abs{\mathbf{k}}$, general solution is
 \begin{eqopt}[darkred]\label{Mode_exp}
-    \chi_{\vec{k}}(\tau) = \frac{1}{\sqrt{2}} \left( a^-_{\vec{k}} \, v^*_k(\tau) + a^+_{-\vec{k}}\, v_k(\tau)  \right) 
+    \chi_{\mathbf{k}}(\tau) = \frac{1}{\sqrt{2}} \left( a^-_{\mathbf{k}} \, v^*_k(\tau) + a^+_{-\mathbf{k}}\, v_k(\tau)  \right) 
 \end{eqopt}
-\emph{$a_{\vec{k}}$ coefficients are not yet identified as annihilation/creation operators, $v_k$ are called mode functions.} Normalization is \textcolor{darkred}{$\Im(v^{\prime}v^*)=1/2$}. 
+\emph{$a_{\mathbf{k}}$ coefficients are not yet identified as annihilation/creation operators, $v_k$ are called mode functions.} Normalization is \textcolor{darkred}{$\Im(v^{\prime}v^*)=1/2$}. 
 Put back in~\eqref{Fourier}
 \begin{equation}\label{Fourier_v}
-\chi(\vec{x}, \tau) = \frac{1}{\sqrt{2}} \int \frac{d^3 k}{(2\pi)^{3/2}} \left[ a^-_{\vec{k}} v_k^*(\tau) e^{i \vec{k} \cdot \vec{x}} + a_{-\vec{k}}^+ v_k(\tau) e^{-i \vec{k} \cdot \vec{x}} \right]
+\chi(\mathbf{x}, \tau) = \frac{1}{\sqrt{2}} \int \frac{d^3 k}{(2\pi)^{3/2}} \left[ a^-_{\mathbf{k}} v_k^*(\tau) e^{i \mathbf{k} \cdot \mathbf{x}} + a_{-\mathbf{k}}^+ v_k(\tau) e^{-i \mathbf{k} \cdot \mathbf{x}} \right]
 \end{equation}
 EOM for $v_k$ is
 \begin{equation}
@@ -29,9 +29,9 @@ Define canonical momentum and Hamiltonian:
 \end{eqopt}
 Impose equal time commutation relations: $[\hat{\chi}(x, \tau), \hat{\Pi}(y, \tau)] = i \delta^3(x - y)$
 
-Here one may show that, promoting the coefficients $a_{\vec{k}}$ to operators, they obey commutation relations of annihilation/creation operators; with which one can construct quantum states of the theory.
+Here one may show that, promoting the coefficients $a_{\mathbf{k}}$ to operators, they obey commutation relations of annihilation/creation operators; with which one can construct quantum states of the theory.
 \begin{equation}
-    \ket{m_{\vec{k_1}}, n_{\vec{k_2}}, \ldots} = \frac{1}{\sqrt{m!n!\ldots}}(\hat{a}_{\vec{k}_1}^\dagger)^m(\hat{a}_{\vec{k}_2}^\dagger)^n\ldots \ket{0}
+    \ket{m_{\mathbf{k_1}}, n_{\mathbf{k_2}}, \ldots} = \frac{1}{\sqrt{m!n!\ldots}}(\hat{a}_{\mathbf{k}_1}^\dagger)^m(\hat{a}_{\mathbf{k}_2}^\dagger)^n\ldots \ket{0}
 \end{equation}
 
 %Bogoliubov transformation
@@ -43,14 +43,14 @@ Here one may show that, promoting the coefficients $a_{\vec{k}}$ to operators, t
 \end{eqopt}
 Impose normalization condition on $u_k$: $u_k^{\prime}u_k^* - u_k^{\prime *}u_k=i$ to get \textcolor{darkred}{$\abs{\alpha_k}^2 - \abs{\beta_k}^2 = 1$}.
 \begin{equation}\label{Fourier_u}
-    \chi(\vec{x}, \tau) = \frac{1}{\sqrt{2}} \int \frac{d^3 k}{(2\pi)^{3/2}} \left[ b^-_{\vec{k}} u_k^*(\tau) e^{i \vec{k} \cdot \vec{x}} + b_{-\vec{k}}^+ u_k(\tau) e^{-i \vec{k} \cdot \vec{x}} \right]
+    \chi(\mathbf{x}, \tau) = \frac{1}{\sqrt{2}} \int \frac{d^3 k}{(2\pi)^{3/2}} \left[ b^-_{\mathbf{k}} u_k^*(\tau) e^{i \mathbf{k} \cdot \mathbf{x}} + b_{-\mathbf{k}}^+ u_k(\tau) e^{-i \mathbf{k} \cdot \mathbf{x}} \right]
     \end{equation}
-To find relation between $b_{\vec{k}}$ and $a_{\vec{k}}$, equate~\eqref{Fourier_v} and~\eqref{Fourier_u}
+To find relation between $b_{\mathbf{k}}$ and $a_{\mathbf{k}}$, equate~\eqref{Fourier_v} and~\eqref{Fourier_u}
 A generic state is 
 \begin{equation}
-    \ket{\psi} = \sum_{m,n,\ldots} C_{mn}^A \ket{m_{\vec{k_1}}, n_{\vec{k_2}}, \ldots}_A = \sum_{m,n,\ldots} C_{mn}^B \ket{m_{\vec{k_1}}, n_{\vec{k_2}}, \ldots}_B
+    \ket{\psi} = \sum_{m,n,\ldots} C_{mn}^A \ket{m_{\mathbf{k_1}}, n_{\mathbf{k_2}}, \ldots}_A = \sum_{m,n,\ldots} C_{mn}^B \ket{m_{\mathbf{k_1}}, n_{\mathbf{k_2}}, \ldots}_B
 \end{equation}
-Show that \textcolor{red}{$\tensor[_B]{\langle0|}{}\,\hat N^A_{\vec k}\,\ket{0}_{B} = \abs{\beta_{\vec{k}}}^2 \delta^{(3)}(0)$}, divergence is due to infinite spatial volume.
+Show that \textcolor{red}{$\tensor[_B]{\langle0|}{}\,\hat N^A_{\mathbf k}\,\ket{0}_{B} = \abs{\beta_{\mathbf{k}}}^2 \delta^{(3)}(0)$}, divergence is due to infinite spatial volume.
 \end{mycolorbox}
 
 %Flat quantization
@@ -78,10 +78,10 @@ Let \textcolor{mypurple}{$k^2\rightarrow \omega^2_k=k^2+m_{\text{eff}}^2$}
 \begin{equation}
     v_k(\tau_0) = \frac{1}{\sqrt{2\omega_k(\tau_0)}} e^{i\omega_k(\tau_0)\tau_0} 
 \end{equation}
-\emph{To these one can associate a vacuum state $\ket{0}_{\tau_0}$, which is the eigenstate of the annihilation operator $\hat{a}_{\vec{k}}$ at time $\tau_0$. It will not be the 
+\emph{To these one can associate a vacuum state $\ket{0}_{\tau_0}$, which is the eigenstate of the annihilation operator $\hat{a}_{\mathbf{k}}$ at time $\tau_0$. It will not be the 
 lowest energy state at later times $\rightarrow$ time dependence of the effective mass gives rise to particle creation.}
 
-In $dS$ spacetime $\tau = -1/aH \; \Rightarrow\;  \tau \in \ointerval[scaled]{-\infty}{0} \; \Rightarrow \; m_{\text{eff}}=(aH)^2\left[(m/H)^2-2\right]$
+In $dS$ spacetime $a\propto e^{Ht} \; \Rightarrow\; \tau = \int_{-\infty}^t dt e^{-Ht}\; \Rightarrow\;  \tau  = -1/aH \; \Rightarrow\;  \tau \in \ointerval[scaled]{-\infty}{0} \; \Rightarrow \; m_{\text{eff}}=(aH)^2\left[(m/H)^2-2\right]$
 EOM for $v_k$ becomes 
 \begin{equation}\label{eq:EOMvk}
     v_k^{\prime\prime} + \Biggl[ k^2 - \frac{1}{\tau^2}\overbrace{\left(2-\frac{m^2}{H^2}\right)}^{\nu^2-1/4} \;\Biggr] v_k = 0
@@ -102,8 +102,8 @@ The mode functions in~\eqref{mode_dS} define the \textit{\textcolor{darkgreen}{B
     \begin{tikzpicture}[x=1.4cm,y=1.2cm]
 
         % --- axes -----------------------------------------------------
-        \draw[very thick,->] (0,0) -- (0,4) node[left] {$\log(aH)$};
-        \draw[very thick,->] (0,0) -- (5.5,0) node[right] {$N$};
+        \draw[very thick,->] (0,0) -- (0,4) node[below,left] {$\log(aH)$};
+        \draw[very thick,->] (0,0) -- (8.5,0) node[right] {$N$};
       
         % --- horizon‐crossing “grid” (magenta) ------------------------
         \coordinate (khoriz) at (1.5,0);
@@ -111,17 +111,20 @@ The mode functions in~\eqref{mode_dS} define the \textit{\textcolor{darkgreen}{B
       
         \draw[dashed] (khoriz) ++(0,0) -- ++(0,4);   % vertical
         \draw[dashed] (khoriz) ++(3,0) -- ++(0,4);   % vertical
-        \draw[magenta,very thick]  (5,2) -- (lhoriz) node[left] {k};  % horizontal
+        \draw[magenta,very thick]  (8,2) -- (lhoriz) node[left] {k};  % horizontal
 
          % --- illustrative k-mode trajectory (lavender) ----------------
-         \draw[very thick,violet!70!white]
-         plot coordinates{(0,0.5) (3,3.5) (5,1.5)};
+         \draw[very thick,violet!70!white] 
+         plot coordinates{(0,0.5) (3,3.5) (5,1.5) (6.5,1) (8,1.1)};
       
-        % intersection dots
+        % intersection dots 
         \fill (1.5,2) circle (3pt);
         \fill (4.5,2) circle (3pt);
         \fill (0,0.5) circle (3pt);
         \fill (3,3.5) circle (3pt) node[above] {Inflation ends};
+        \fill (5,1.5) circle (3pt) node[above=4pt,right] {$\gamma-m$ eq.};
+        \fill (6,1.166) circle (3pt) node[below=3pt] {rec.};
+        \fill (7,1.03333) circle (3pt) node[below=3pt] {today};
       
         % --- sub-/super-horizon labels --------------------------------
         \node[align=center] at (0.75,2.5) {Sub\\Horizon};
@@ -137,6 +140,6 @@ The physical wavelength is defined as \textcolor{darkgreen}{$\lambda_{\text{phys
 For de Sitter space, $\textcolor{darkred}{R_{dS}= 12H^2} \; \Rightarrow \; \abs{k\tau} \propto R_{dS}/\lambda_{\text{phys}}$, 
 imposing $\ll 1$ we find that \emph{background curvature is much grater than the physical wavelength of the mode $\Rightarrow$ at early times modes behave as they were in Minkowski spacetime}.
 
-One can then calculate observables like the \textit{power spectrum} $\tensor*[_{BD}]{\expval{0|\hat \chi_{\vec k}\,\hat \chi_{\vec k'}|0}}{_{BD}} = \textcolor{darkgreen}{P_{v_k}}\delta(\vec{k}+\vec{k}')$, which is $\approx (aH)^2/(2k^3)$ for $\abs{k\tau} \ll 1$ (measuring $P_{v_k}$ one can get $aH$!)
+One can then calculate observables like the \textit{power spectrum} $\tensor*[_{BD}]{\expval{0|\hat \chi_{\mathbf{k}}\,\hat \chi_{\mathbf{k}'}|0}}{_{BD}} = \textcolor{darkgreen}{P_{v_k}}\delta(\mathbf{k}+\mathbf{k}')$, which is $\approx (aH)^2/(2k^3)$ for $\abs{k\tau} \ll 1$ (measuring $P_{v_k}$ one can get $aH$!)
 \end{mycolorbox} 
 
