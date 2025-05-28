@@ -1,0 +1,45 @@
+\section{Tachyonic Instability}
+The standard way to trigger spontaneous scalarization is via a \textit{tachyonic instability} at the linear level, which is
+eventually quenched due to the eﬀect of nonlinear terms. Consider for instance a scalar $\phi^n$ theory with $n>2$ in Minkowski space-time:
+\begin{equation} \label{L_Minkowski}
+    \mathcal{L}= -\frac{1}{2} \eta^{\mu \nu} \partial_\mu \phi\partial_\nu \phi - \frac{1}{2} \mu^2 \phi^2 - \frac{1}{n}\lambda \phi^n
+\end{equation}
+the field equation $\,\Box_\eta \phi - \mu^2 \phi - \lambda \phi^{n-1}=0\,$ is linearized considering small 
+perturbations $\delta \phi$ around $\phi = 0 \,$:
+\begin{equation}\label{Linearised_field_eq}
+    \Box_\eta \delta\phi - \mu^2 \delta\phi = 0
+\end{equation}
+A tachyonic instability arises for imaginary bare mass with $\mu^2<0$ and $k^2 < \abs{\mu^2}$, 
+as the dispersion relation $\omega^2 = k^2 - \abs{\mu^2}$ leads to 
+\begin{equation}
+    \delta \phi \sim e^{\pm i \bf{k}\bf{x}} e^{\pm i\sqrt{k^2- \abs{\mu^2}}t}
+\end{equation}
+we see that perturbations with small wave number exhibit exponential growth.
+
+However, as $\phi$ grows, the nonlinear self-interaction $\lambda \phi^n$ becomes dominant. 
+Looking for a constant solution for the equation of motion of~\eqref{L_Minkowski} we get 
+$\phi_{min}^{n-2} = -\frac{\mu^2}{\lambda}$ 
+(it corresponds to the minimum of the potential).
+Therefore, nonlinear interactions eventually quench the instability and
+drive the field to a different, stable configuration. The process is called 
+\textit{tachyonic condensation} and is associated to a phase transition of
+the system~\cite{Doneva_2024}.
+
+Notice that in BD theory we cannot have spontaneous scalarization as in the Klein Gordon equation~\eqref{eq:KGBD2} the coupling with matter is constant and thus does not survive in the linearized equation of motion (which in turn implies that no tachyonic instability can occur). Even with $V \neq 0$, thus having a term $V_{,\phi\phi}\delta \phi$ in the linearized equation, spontaneous scalarization cannot take place because for $V_{,\phi\phi}<0$ the tachyonic instability is \textit{global}, i.e.\ $\delta \phi$ grows indefinitely and tachyonic condensation never occurs. 
+
+\begin{comment}
+In a general, curved space-time, setting,~\eqref{Linearised_field_eq} reads
+\begin{equation}\label{Linearised_field_eq_curved}
+    \Box \delta\phi - \mu^2 \delta\phi = 0, \quad \text{with} \quad \Box \equiv g^{\mu \nu} \nabla_\mu \nabla_\nu = \frac{1}{\sqrt{-g}} \partial_\mu \left(\sqrt{-g} g^{\mu\nu}\partial_\nu\right)
+\end{equation}
+Considering a spherically symmetric metric, we can decompose $\delta \phi$ as
+\begin{equation}
+    \delta \phi = \sum_{lm}\frac{\psi_{lm}(r)}{r} Y_{lm}(\theta, \varphi)e^{-i\omega t}
+\end{equation}
+which inserted in~\eqref{Linearised_field_eq_curved} gives 
+\begin{equation}\label{Schrodinger_like_eq}
+    \frac{d^2\psi_{lm}}{dr^2_*} + \left[\omega^2 - V_{\text{eff}}(r) \right] \psi_{lm}= 0
+\end{equation}
+with $r_*$ being the tortoise coordinate.
+The threshold for the tachyonic instability to happen thus depends on the spacetime~\cite{Doneva_2024}.
+\end{comment}

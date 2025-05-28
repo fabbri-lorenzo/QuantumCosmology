@@ -1,0 +1,25 @@
+\section{Damour-Esposito-Farese Model}
+The (hystorically) first model for spontaneous scalarization is the Damour-Esposito-Farese (DEF) model~\cite{Esposito-Farese:1993gds}, which is usually presented in the Einstein frame
+\begin{equation}\label{eq:DEFAction}
+    S_{\text{DEF}}^{\text{(E)}} = \frac{1}{16\pi G} \int d^4x \sqrt{-g} \left( R - 2 \nabla_\mu \phi \nabla^\mu \phi \right) 
+    + S_m [\Psi_m; A^2(\phi) g^{(J)}_{\mu\nu}]
+\end{equation}
+with $A^2(\phi)$ being the conformal factor that relates this frame with Jordan one (for notation clarity here we used $g_{\mu\nu}$ and $g^{(J)}_{\mu\nu}$ for Einstein/Jordan frame metric); in addition to a redefinition of the scalar field. Writing down the equations of motion we obtain~\cite{Esposito-Farese:1993gds}
+\begin{align}
+    G_{\mu\nu} &= 2\partial_\mu \phi \partial_\nu \phi - \left(\partial \phi\right)^2 g_{\mu\nu}+ 8\pi G T_{\mu\nu}^{(m)} \\[6pt]
+    \Box \phi &= 4\pi G \,\alpha(\phi)\, T^{(m)} \label{eq:DEF_KG}
+\end{align}
+Where $\alpha(\phi)\equiv \frac{\partial \ln{A(\phi)}}{\partial \phi}$ and $T_{\mu\nu} \equiv -2/\sqrt{-g} \, \delta S_m/\delta g^{\mu\nu}$.
+Therefore, the possible tachyonic instability is governed by $\alpha(\phi)$, which can be expanded around $\phi = \phi_0$ as
+\begin{equation}\label{eq:alpha_expansion}
+    \alpha(\phi) = \alpha_0 + \beta_0 \left(\phi-\phi_0\right) + \textit{higher order terms}
+\end{equation} 
+producing a linearized Klein Gordon equation
+\begin{equation}\label{eq:DEF_KG_linearized}
+    \Box \delta \phi = 4\pi G \, \beta_0\, \delta \phi \, T^{(m)}
+\end{equation}
+Usually stars have $T>0$, thus for $\beta(\phi_0) <0$ they can develop tachyonic instability. The higher order terms in~\eqref{eq:alpha_expansion} will eventually lead to tachyonic condensation.
+
+This procedure can be applied also to a wide range of scalar tensor theories with an analogue Klein Gordon equation to~\eqref{eq:DEF_KG}. Considering BD theory, in~\ref{sec:conformaltransformations} we found $\alpha = \textit{const}$; 
+as for BD $A$ is proportional to the scalar field of the Jordan frame, which can be obtained integrating~\eqref{eq:transformationDerv}. This confirms the result obtained in the previous section inspecting the equation of motion in the Jordan frame: BD theory does not exhibit spontaneous scalarization, with or without a potential $V$.
+
