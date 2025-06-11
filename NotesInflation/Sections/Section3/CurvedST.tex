@@ -25,7 +25,7 @@ EOM for $v_k$ is
 
 Define canonical momentum and Hamiltonian:
 \begin{eqopt}[darkgreen]
-\Pi = \frac{\partial \mathcal{L}}{\partial \chi'} \qquad \hat{\mathcal{H}} = -\mathcal{L} + \hat{\Pi} \chi'
+\Pi = \frac{\partial \mathcal{L}}{\partial \chi'} \qquad \hat{\mathcal{H}} = -\mathcal{L} + \hat{\Pi} \chi' \color{black} = \frac{1}{2}\int d^3x \left( \hat{\Pi}^2 + \left(\nabla \hat{\chi}\right)^2 + m_{\text{eff}}^2 \hat{\chi}^2 \right)
 \end{eqopt}
 Impose equal time commutation relations: $[\hat{\chi}(x, \tau), \hat{\Pi}(y, \tau)] = i \delta^3(x - y)$
 
@@ -48,8 +48,10 @@ Impose normalization condition on $u_k$: $u_k^{\prime}u_k^* - u_k^{\prime *}u_k=
 To find relation between $b_{\mathbf{k}}$ and $a_{\mathbf{k}}$, equate~\eqref{Fourier_v} and~\eqref{Fourier_u}
 A generic state is 
 \begin{equation}
-    \ket{\psi} = \sum_{m,n,\ldots} C_{mn}^A \ket{m_{\mathbf{k_1}}, n_{\mathbf{k_2}}, \ldots}_A = \sum_{m,n,\ldots} C_{mn}^B \ket{m_{\mathbf{k_1}}, n_{\mathbf{k_2}}, \ldots}_B
+    \ket{\psi} = \sum_{m,n,\ldots} C_{mn\dots}^A \ket{m_{\mathbf{k_1}}, n_{\mathbf{k_2}}, \ldots}_A = \sum_{m,n,\ldots} C_{mn\dots}^B \ket{m_{\mathbf{k_1}}, n_{\mathbf{k_2}}, \ldots}_B
 \end{equation}
+with $\ket{m_{\mathbf{k_1}}, n_{\mathbf{k_2}}, \ldots}_A \equiv (m!n!\dots)^{-1/2}\ket{(\hat{a}_{\mathbf{k_1}}^\dagger)^m (\hat{a}_{\mathbf{k_2}}^\dagger)^n \dots}$
+
 Show that \textcolor{red}{$\tensor[_B]{\langle0|}{}\,\hat N^A_{\mathbf k}\,\ket{0}_{B} = \abs{\beta_{\mathbf{k}}}^2 \delta^{(3)}(0)$}, divergence is due to infinite spatial volume.
 \end{mycolorbox}
 
@@ -58,15 +60,16 @@ Show that \textcolor{red}{$\tensor[_B]{\langle0|}{}\,\hat N^A_{\mathbf k}\,\ket{
     \textbf{Flat background:}
     
 \emph{Hamiltonian is time independent. The vacuum is the eigenstate of the $\hat{H}$ with lowest energy.}
-Substitute~\eqref{Mode_exp} in $\hat{H}$ (here $a=0 \Rightarrow m_{\text{eff}}=0$) and define 
+Substitute~\eqref{Mode_exp} in $\hat{H}$ (here $a=1 \Rightarrow m_{\text{eff}}=m$, set it to zero for convenience, since we are only interested in the fact that it is not time dependent) and define 
 \begin{eqopt}[darkgreen]
     F_k \equiv v_k^{\prime 2} +k^2 v_k^2 \qquad E_k \equiv  \abs{v_k^{\prime}}^2 +k^2 \abs{v_k}^2
 \end{eqopt}
-Write the mode functions as $v_k = r_k(\tau) e^{i\alpha_k(\tau)}$. Impose normalization condition on $v_k$ to rewrite $E_k$ and then minimize it: $dE_K/dr^\prime = 0 , dE_K/dr = 0 $. Find 
+Write the mode functions as $v_k = r_k(\tau) e^{i\alpha_k(\tau)}$. 
+For $\ket{0}_v$ to be vacuum, $\tensor*[_v]{\expval{0|\hat{H}|0}}{_v} = \tfrac{\delta(0)}{2}\int d^3k E_k$ must be minimized.
+Impose normalization condition on $v_k$ to rewrite $E_k$ and then minimize it: $dE_K/dr^\prime = 0$, $dE_K/dr = 0 $. Find mode functions that minimize energy:
 \begin{equation}\label{eq:flat_vk}
     v_k = \frac{1}{\sqrt{2k}} e^{ik\tau}
 \end{equation}
-Use it to simplify the Hamiltonian as $E_k,F_k$ take much simpler forms.
 \end{mycolorbox} 
 
 %dS quantization
@@ -74,7 +77,7 @@ Use it to simplify the Hamiltonian as $E_k,F_k$ take much simpler forms.
 \textbf{dS background:} \hfill $\rho=T^{00}=\Lambda/8\pi G=-T^{ii}=-P \Rightarrow H^2 = \text{const}$
 
 \vspace{1mm}
-Let \textcolor{mypurple}{$k^2\rightarrow \omega^2_k=k^2+m_{\text{eff}}^2$} 
+Let \textcolor{mypurple}{$k^2\rightarrow \omega^2_k(\tau)=k^2+m_{\text{eff}}^2(\tau)$} 
 \begin{equation}
     v_k(\tau_0) = \frac{1}{\sqrt{2\omega_k(\tau_0)}} e^{i\omega_k(\tau_0)\tau_0} 
 \end{equation}
@@ -94,7 +97,7 @@ with \textcolor{darkgreen}{$\nu \equiv \sqrt{\frac{9}{4}-\frac{m^2}{H^2}}$}. \un
 \begin{eqopt}[darkred]\label{mode_dS}
     v_k(\tau) = \left[ C_1\left(1-\frac{i}{k\tau}\right)+ C_2 \left(1+\frac{i}{k\tau}\right) \right]
 \end{eqopt}
-Now impose initial conditions at $\tau\ll 1$ to determine $C_1$ and $C_2$: \emph{ask the scalar to be in the instantaneous vacuum state at early times} $\Rightarrow$ $C_1=0$ and $C_2=1$ (due to limit forms of $H_\nu^{(1,2)}$) to recover the flat space limit~\eqref{eq:flat_vk}.
+Now impose initial conditions at $\tau\ll 0$ to determine $C_1$ and $C_2$: \emph{ask the scalar to be in the instantaneous vacuum state at early times} $\Rightarrow$ $C_1=0$ and $C_2=1$ (due to limit forms of $H_\nu^{(1,2)}$) to recover the flat space limit~\eqref{eq:flat_vk}.
 Note that, at early times, $k \gg 1/\tau$ as $k$ is a fixed mode\footnote{A mode $k$ is associated with a wavelength \textcolor{darkred}{$\lambda = 2\pi/k$}, so when a mode $k</>aH$, it is said to be super/sub-horizon meaning that the wavelength is larger/smaller than the Hubble radius}.
 
 The mode functions in~\eqref{mode_dS} define the \textit{\textcolor{darkgreen}{Bunch-Davies vacuum}} $\ket{0}_{BD}$, i.e. the vacuum state at $\tau_0$.

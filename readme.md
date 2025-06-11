@@ -4,4 +4,4 @@ These notes were written for personal use and are meant to be a useful summary f
 the basics of the inflationary framework in cosmology. 
 
 # Scalar Tensor Theories of Gravity
-**[Essay on scalar tensor theories of gravity](essay/STTs.pdf)** delves into Brans-Dicke theory and f(R) theories to introduce scalar tensor theories and discuss their implications in cosmology. 
+**[Essay on scalar tensor theories of gravity](essay/STTs.pdf)** delves into Brans-Dicke theory and f(R) theories to introduce scalar tensor theories and discuss their implications in cosmology, focusing on a particular screening mechanism called "spontaneous scalarization". 

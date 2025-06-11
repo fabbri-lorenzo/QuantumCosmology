@@ -12,7 +12,7 @@ Its equations of motion are given by the Einstein equations and the Klein-Gordon
 \begin{equation}
    H^2 = \frac{1}{3M^2_P} \left(\frac{\dot{\phi}^2}{2} + V\right) \qquad \ddot{\phi} + 3 H \dot{\phi} = -V_{,\phi}  \label{eqMotionPhi}
 \end{equation}
-(From KG eq you can get $\dot{H} = -\dot{\phi}^2/2 M_{P}^2$). For a perfect fluid \textcolor{darkgreen}{$T^{\mu\nu} = (\rho + P) u^\mu u^\nu - P g^{\mu\nu}$},  
+From KG eq you can get \textcolor{darkred}{$\dot{H} = -\dot{\phi}^2/2 M_{P}^2$}. For a perfect fluid \textcolor{darkgreen}{$T^{\mu\nu} = (\rho + P) u^\mu u^\nu - P g^{\mu\nu}$},  
 \begin{equation}
    \color{darkgreen}T^{\mu\nu} = \frac{2}{\sqrt{g}} \frac{\delta S_{\phi}}{\delta g_{\mu\nu}} \quad \color{black} \Rightarrow \quad  \omega =  \frac{\frac{\dot{\phi}^2}{2} - V(\phi)}{\frac{\dot{\phi}^2}{2} + V(\phi)}
 \end{equation}
@@ -23,9 +23,9 @@ Rewrite~\eqref{eqMotionPhi} imposing slow roll approx for potential and field ac
 \begin{eqopt}[darkgreen]
     \epsilon_{V} \equiv \frac{M_{P}^2}{2} \left( \frac{V_{,\phi}}{V} \right)^2 \qquad \eta_{V} \equiv M_{P}^2 \frac{V_{,\phi\phi}}{V}
 \end{eqopt}
-\textcolor{darkred}{$ \epsilon = \epsilon_{V}$} and \textcolor{darkred}{$\eta = -2\eta_{V}+ 4\epsilon_{V}$}. Hence, $V$ must be flat enough to have $V_{,\phi}/V,\quad V_{,\phi\phi}/V\ll 1$.
+\textcolor{darkred}{$ \epsilon = \epsilon_{V}$} and \textcolor{darkred}{$\eta = -2\eta_{V}+ 4\epsilon_{V}$}. Hence, $V$ must be flat enough to have $V_{,\phi}/V$, $V_{,\phi\phi}/V\ll 1$.
 
-For each model calculate $\epsilon_V, \eta_V$ and impose $\ll 1$ (for first model just $\epsilon_V$). Then find $\phi(N)$ to get the field value for 60 e-foldings. Rewrite $\epsilon_V(N), \eta_V(N)$
+For each model calculate $\epsilon_V, \eta_V$ and impose $\ll 1$. Then find $\phi(N)$ to get the field value for 60 e-foldings. Rewrite $\epsilon_V(N), \eta_V(N)$
 
 % Large Fields Models
 \begin{mycolorbox}[pink!93!black]
@@ -34,7 +34,7 @@ For each model calculate $\epsilon_V, \eta_V$ and impose $\ll 1$ (for first mode
     \begin{eqopt}
         V(\phi) = \lambda_n \phi^n \qquad n>0
     \end{eqopt}
-    $\phi(N_{tot})\sim 15M_P$ and $\phi(start)\sim \sqrt{2}M_P$.
+    $N_{tot}=\int dN = \int_{\phi(end)}^{\phi(start)} \frac{d\phi}{\sqrt{2\epsilon}}$. $\phi(end)\sim \sqrt{2}M_P$ and $\phi(start)\equiv \phi(N_{tot})\sim 15M_P$.
     \begin{equation}
        \epsilon_V = \frac{n}{4N} \qquad \eta_V = \frac{n-1}{2N}
     \end{equation}
@@ -98,6 +98,7 @@ For each model calculate $\epsilon_V, \eta_V$ and impose $\ll 1$ (for first mode
     \begin{eqopt}
         V(\phi) = V_0 - \lambda_n \phi^n \qquad n>0
     \end{eqopt}
+    $\lambda_n \phi^n \ll V_0$, $\epsilon_V, \eta_V \ll 1 \Rightarrow \phi \ll M_P$ $N(\phi=0)\rightarrow \infty$ so we can have as much expansion as needed.
     \begin{equation}
        \epsilon_V = \frac{n^2 \lambda^2}{2V_0^2} \left[n(n-2)N\frac{\lambda}{V_0}\right]^{\frac{2n-2}{2-n}} \qquad \eta_V =- \frac{n-1}{n-2}\frac{1}{N}
     \end{equation}
