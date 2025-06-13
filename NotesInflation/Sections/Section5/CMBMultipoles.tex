@@ -16,17 +16,18 @@ We can use this orthonormality to determine the \textit{multipole moments} $a_{l
     a_{lm}=\int d\mathbf{n} \frac{\delta T_{now}}{T_{now}}(\mathbf{n}) Y^*_{lm}(\mathbf{n})
 \end{equation}
 
-The CMB \textit{angular power spectrum} $C_l$ we obtain experimentally is the ensemble two-point function of the $a_{lm}$.  One then considers an average over all possible realizations of the Universe (a hypothetical average over infinitely many CMB skies)\footnote{Not to be confused with the inner product on the 2-sphere, which decomposes \emph{one} sky map into modes.}
+The CMB \textit{angular power spectrum} $C_l$ is the ensemble two-point function of the $a_{lm}$; it \emph{measures amplitude of temperature fluctuations as a function of wavelength: \textcolor{darkred}{$\lambda = 2\pi/l$}}. One considers an average over all possible realizations of the Universe (a hypothetical average over infinitely many CMB skies)~\footnote{Not to be confused with the inner product on the 2-sphere, which decomposes \emph{one} sky map into modes.}.
 \begin{equation}\label{eq:ensembleAverage}
     \bigl<a_{lm}a^*_{l'm'} \bigr>=C_l \,\delta_{ll'}\,\delta_{mm'} \qquad \hat{C}_l = \frac{1}{2l+1} \sum_{m=-l}^l \abs{a_{lm}}^2 \approx C_l
 \end{equation}
-The introduction of an \textit{estimator} $\hat{C}_l$ for $C_l$ is motivated due to the fact that, for fixed $l$, we have $2l+1$ different $a_{lm}$, allowing for $2l+1$ independent estimated of $C_l$.
-Because the process is assumed statistically isotropic, all the $2l+1$ different $m$-modes at fixed $l$ are statistically equivalent, hence averaging over them in our one sky gives an unbiased estimator of the ensemble-average power~\cite{CosmologyBau}.
-$\hat{C}_l = C_l$ in the infinite ensemble limit, i.e.\ $\bigl<\hat{C}_l \bigr>=C_l$. However, we have a nonzero \textit{cosmic variance}
+The introduction of an \textit{estimator} $\hat{C}_l$ for $C_l$ is motivated due to the fact that, for fixed $l$, we have $2l+1$ different $a_{lm}$, allowing for $2l+1$ independent estimates of $C_l$.
+Because the process is assumed to be statistically isotropic, all the $2l+1$ different $m$-modes at fixed $l$ are statistically equivalent, hence averaging over them in our one sky gives an unbiased estimator of the ensemble-average power~\cite{CosmologyBau}.
+$\hat{C}_l = C_l$ in the infinite ensemble limit, i.e.\ $\bigl<\hat{C}_l \bigr>=C_l$. We have a nonzero \textit{cosmic variance}
 \begin{eqopt}[darkred]
     \frac{\Delta C_l}{C_l}= \sqrt{\frac{2}{2l+1}}
 \end{eqopt}
 which can be proved using Wick's theorem in quite a long calculation starting from $\Delta C_l \equiv \sqrt{\bigl<(C_l-\hat{C}_l)^2 \bigr>}$ . We thus have large errors for small $l$ values.
+What we obtain experimentally is $\hat{C}_l$: the observed spectrum of a given realization. However, the physics is given by the ensemble averaged power spectrum $C_l$.
 \begin{comment}
 If you look at a single $l$ pattern on the sky, you'll see alternating rings (for $m =0$) or lobes (for $m \neq0$).
 The Legendre polinomials $P_l^0 (\cos{\theta})$ have exactly $l$ zeros in the interval $0,\pi$, the first one is $\theta \sim \pi /2l$, a full oscillation of the pattern (hot $\rightarrow$ cold $\rightarrow$ hot) on the sphere takes two of those zero-crossings, i.e.\ an angular period $\Delta \theta \sim \pi/l$.
