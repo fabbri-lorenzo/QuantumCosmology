@@ -95,7 +95,7 @@ Solution is in terms of Hankel functions:
 \end{eqopt}
 with \textcolor{darkgreen}{$\nu \equiv \sqrt{\frac{9}{4}-\frac{m^2}{H^2}}$}. \underline{Consider massless scalar field} $\Rightarrow \nu = 3/2$. This leads to
 \begin{eqopt}[darkred]\label{mode_dS}
-    v_k(\tau) = \left[ C_1\left(1-\frac{i}{k\tau}\right)+ C_2 \left(1+\frac{i}{k\tau}\right) \right]
+    v_k(\tau) = \left[ C_1 \frac{e^{-ik\tau}}{\sqrt{2k}}\, \left(1-\frac{i}{k\tau}\right)+ C_2 \frac{e^{ik\tau}}{\sqrt{2k}} \,\left(1+\frac{i}{k\tau}\right) \right]
 \end{eqopt}
 Now impose initial conditions at $\tau\ll 0$ to determine $C_1$ and $C_2$: \emph{ask the scalar to be in the instantaneous vacuum state at early times} $\Rightarrow$ $C_1=0$ and $C_2=1$ (due to limit forms of $H_\nu^{(1,2)}$) to recover the flat space limit~\eqref{eq:flat_vk}.
 Note that, at early times, $k \gg 1/\tau$ as $k$ is a fixed mode~\footnote{A mode $k$ is associated with a wavelength \textcolor{darkred}{$\lambda = 2\pi/k$}, so when $k</>aH$, it is said to be super/sub-horizon meaning that the $\lambda$ is larger/smaller than the Hubble radius. We compare with the Hubble radius instead of the comoving particle horizon because the former is a local, instantaneous length scale over which causal processes can operate at that moment, while the latter is a cumulative distance that light could have traveled (monotonically increasing function).}.
@@ -138,9 +138,8 @@ Note that, at early times, $k \gg 1/\tau$ as $k$ is a fixed mode~\footnote{A mod
 \end{center}
 
 The mode functions in~\eqref{mode_dS} define the \textit{\textcolor{darkgreen}{Bunch-Davies vacuum}} $\ket{0}_{BD}$, i.e. the vacuum state at $\tau_0$.
-The physical wavelength is defined as \textcolor{darkgreen}{$\lambda_{\text{phys}} = a \lambda$}. 
-For de Sitter space, $\textcolor{darkred}{R_{dS}= 12H^2} \; \Rightarrow \; \abs{k\tau} \propto R_{dS}/\lambda_{\text{phys}}$, 
-imposing $\ll 1$ we find that \emph{background curvature is much grater than the physical wavelength of the mode $\Rightarrow$ at early times modes behave as they were in Minkowski spacetime}.
+The physical wavelength is defined as \textcolor{darkgreen}{$\lambda_{\text{phys}} = a \lambda$}. $\abs{k\tau} \propto (H)^{-1}/\lambda_{\text{phys}}$, 
+imposing $\gg 1$ we find that \emph{background curvature (Hubble radius) is much grater than the physical wavelength of the mode $\Rightarrow$ at early times modes behave as they were in Minkowski spacetime}.
 
 One can then calculate observables like the \textit{power spectrum} $\tensor*[_{BD}]{\expval{0|\hat \chi_{\mathbf{k}}\,\hat \chi_{\mathbf{k}'}|0}}{_{BD}} = \textcolor{darkgreen}{P_{v_k}}\delta(\mathbf{k}+\mathbf{k}')$, which is $\approx (aH)^2/(2k^3)$ for $\abs{k\tau} \ll 1$.
 \end{mycolorbox} 
