@@ -10,7 +10,7 @@ Impose equalities with correspondent variational quantities for perfect fluid~\e
    \delta \rho= a^{-2} \left[-\Phi \bar{\phi}'^{\,2} +  \bar{\phi}' \delta \phi'- \delta \phi \left( \bar{\phi}'' + 2 \frac{a'}{a}\bar{\phi}'\right)\right] \qquad \delta P = a^{-2} \left(\bar{\phi}' \delta \phi'- \Phi \bar{\phi}'^{\,2} \right) -V_{,\phi} \delta \phi
 \end{equation}
 \begin{equation}
-    - (\bar{\rho}+\bar{P})\delta v_i = -\frac{\bar{\phi}^{\prime^2}}{a^2} \overset{!}{=} \frac{\bar{\phi}^{\prime}}{a^2} \partial_i \delta \phi \; \Rightarrow \; \delta v_i = -\frac{ \partial_i \delta \phi}{\bar{\phi}^{\prime}} \; \Rightarrow \;  \textcolor{darkred}{\delta v = -\frac{\delta \phi}{\bar{\phi}^{\prime}}}
+    - (\bar{\rho}+\bar{P})\delta v_i = -\frac{\bar{\phi}^{\prime^2}}{a^2}\delta v_i \overset{!}{=} \frac{\bar{\phi}^{\prime}}{a^2} \partial_i \delta \phi \; \Rightarrow \; \delta v_i = -\frac{ \partial_i \delta \phi}{\bar{\phi}^{\prime}} \; \Rightarrow \;  \textcolor{darkred}{\delta v = -\frac{\delta \phi}{\bar{\phi}^{\prime}}}
 \end{equation}
 \emph{Thus in the comoving frame, in which $\delta v = 0$, $\delta \phi = 0 \; \Rightarrow$ inflation is constant in space.}
 Equations~\eqref{eq:hydro1} \-~\eqref{eq:hydro3} can then be rewritten as:
@@ -62,7 +62,7 @@ $\delta S / \delta u =0$ reproduces~\eqref{eq:MS}.
 
 Notice that MS equation has a similar form to~\eqref{eq:EOMvk} in dS spacetime. In order to make this similarity more explicit 
 evaluate $z'/z$ in terms of $\eta$ and $\epsilon$, then same for $z''/z$ (recall that here the results are not expanded, they are exact).
-So that you can define $\nu^2 -1/4 \equiv -\tau^2 m_{\text{eff}} $ (knowing the expression for $\nu$ in terms of $\epsilon$, $\eta$) with the same intent as in dS space. So that, expanding $u$ in fuourier modes $\int \frac{d^3k}{(2\pi)^{3/2}} u_{\mathbf{k}}(\tau) e^{i\mathbf{k}\cdot\mathbf{x}}$ and then $u(\mathbf{x}, \tau) = \frac{1}{\sqrt{2}} \int \frac{d^3 k}{(2\pi)^{3/2}} \left[ a^-_k v_k^*(\tau) e^{i \mathbf{k} \cdot \mathbf{x}} + a_k^+ v_k(\tau) e^{-i \mathbf{k} \cdot \mathbf{x}} \right]$
+So that you can define $\nu^2 -1/4 \equiv -\tau^2 m_{\text{eff}} $ (knowing the expression for $\nu$ in terms of $\epsilon$, $\eta$) with the same intent as in dS space. So that, expanding $u$ in fuourier modes $\int \frac{d^3k}{(2\pi)^{3/2}} u_{\mathbf{k}}(\tau) e^{i\mathbf{k}\cdot\mathbf{x}}$ and then $u(\mathbf{x}, \tau) = \frac{1}{\sqrt{2}} \int \frac{d^3 k}{(2\pi)^{3/2}} \left[ a^-_{\mathbf{k}} v_k^*(\tau) e^{i \mathbf{k} \cdot \mathbf{x}} + a_{-\mathbf{k}}^\dagger v_k(\tau) e^{-i \mathbf{k} \cdot \mathbf{x}} \right]$
 \begin{eqopt}[darkred]
     v''_k+ \left(k^2- \frac{\nu^2-1/4}{\tau^2}\right) v_k =0 \quad  \textcolor{black}{with} \quad \nu = \frac{3}{2} + \epsilon + \frac{\eta}{2}
 \end{eqopt}
@@ -75,7 +75,7 @@ Because we have the following limit form for Hankel functions (which fixes $C_1$
     H_\nu^{(1,2)}(x \rightarrow \infty) = \sqrt{\frac{2}{\pi}}\frac{1}{\sqrt{x}} e^{\pm i x} e^{\pm i \pi (\nu + 1/2)/2}  
 \end{equation}
 
-Define the \textit{comoving curvature} \textcolor{darkgreen}{$\mathcal{R}\equiv - \Phi -a \delta \phi /z $}$= -u/z$; it is the \emph{spatial curvature on constant inflation hypersurfaces}. 
+Define the \textit{comoving curvature perturbation} \textcolor{darkgreen}{$\mathcal{R}\equiv - \Phi -a \delta \phi /z $}$= -u/z$; it is the \emph{spatial curvature on constant inflation hypersurfaces}. 
 Define also 
 \begin{eqopt}[darkgreen] 
     P_{\mathcal{R}_k} \equiv z^{-2}P_{v_k} \textcolor{black}{= |v_k|^2 / (2\epsilon a^2) \; \overset{k\ll aH}{\approx} \, \frac{2^{\,2\nu-3}}{\pi\,\epsilon\,a^{2}k}\!
@@ -89,7 +89,7 @@ This in turn leads to the definition of the \textit{dimensionless power spectrum
 \end{eqopt}        
 Where we defined also the \textit{amplitude of scalar perturbations} and the \textit{spectral index}
 \begin{eqopt}[darkgreen]
-\mathcal{A}_{s} \equiv \frac{H^{2}}{8\pi^{2}\epsilon} \qquad n_s -1 \equiv 3 - 2\nu \; \textcolor{black}{= -2\epsilon-\eta}
+\mathcal{A}_{s} \equiv \frac{H^{2}}{8\pi^{2}\epsilon}\Big|_{aH=k_*} \qquad n_s -1 \equiv 3 - 2\nu \; \textcolor{black}{= -2\epsilon-\eta}
 \end{eqopt}
 Observations of CMB constrain \textcolor{blue}{$\mathcal{A}_{s} \simeq 2 \cdot 10^{-9}$} and \textcolor{blue}{$n_{s} \simeq 0.96$}. Thus our Universe is said to be slightly \textit{red tilted}.
 \begin{center}
